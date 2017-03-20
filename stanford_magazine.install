@@ -1,0 +1,56 @@
+<?php
+/**
+ * @file
+ * stanford_module.install
+ *
+ * Install, enable, uninstall, and disable functions
+ */
+
+/**
+ * Implements hook_install().
+ */
+function stanford_magazine_install() {
+  // Populate the default {node_access} record.
+  /*
+   *db_insert('node_access')
+   *  ->fields(array(
+   *    'nid' => 0,
+   *    'gid' => 0,
+   *    'realm' => 'all',
+   *    'grant_view' => 1,
+   *    'grant_update' => 0,
+   *    'grant_delete' => 0,
+   *  ))
+   *  ->execute();
+   */
+  /* Your code here */
+}
+
+/**
+ * Implements hook_enable().
+ */
+function stanford_magazine_enable() {
+  /*
+   *magazine_cache_rebuild();
+   */
+  /* Your code here */
+}
+
+/**
+ * Implements hook_disable().
+ */
+function stanford_magazine_disable() {
+  /*
+   *magazine_cache_rebuild();
+   */
+  /* Your code here */
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function stanford_magazine_uninstall() {
+  /*
+   *variable_del('upload_file_types');
+   */
+}

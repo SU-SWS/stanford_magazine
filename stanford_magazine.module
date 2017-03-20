@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * stanford_magazine.module
+ *
+ * Code for the Stanford Magazine feature.
+ */
+
+include_once 'stanford_magazine.features.inc';
