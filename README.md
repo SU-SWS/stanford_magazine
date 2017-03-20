@@ -1,4 +1,4 @@
-#[Stanford Magazine](https://github.com/SU-SWS/stanford_magazine)
+# [Stanford Magazine](https://github.com/SU-SWS/stanford_magazine)
 ##### Version: 7.x-1.x
 
 Maintainers: [boznik](https://github.com/boznik), [cjwest](https://github.com/cjwest)
