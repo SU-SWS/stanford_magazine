@@ -113,5 +113,26 @@ function stanford_magazine_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_stanford_magazine_article'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_stanford_magazine_article_pattern';
+  $strongarm->value = 'magazine/article/[node:title]';
+  $export['pathauto_node_stanford_magazine_article_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_stanford_magazine_series_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_stanford_magazine_series_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_stanford_magazine_topics_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_stanford_magazine_topics_pattern'] = $strongarm;
+
   return $export;
 }
