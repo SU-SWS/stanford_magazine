@@ -13,7 +13,7 @@ Sub Modules
 ---
 
 **[Stanford Magazine Sub Module](https://github.com/SU-SWS/stanford_magazine/modules/)**
-This module provides the Stanford Person entity reference field. By default an instance of this field is created on Stanford Publications but it may be added to other content types.
+This module provides
 
 Installation
 ---

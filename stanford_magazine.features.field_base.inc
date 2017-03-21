@@ -31,6 +31,21 @@ function stanford_magazine_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
+  // Exported field_base: 'field_mag_article_sections'.
+  $field_bases['field_mag_article_sections'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_mag_article_sections',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'paragraphs',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'paragraphs',
+  );
+
   // Exported field_base: 'field_mag_article_series'.
   $field_bases['field_mag_article_series'] = array(
     'active' => 1,
