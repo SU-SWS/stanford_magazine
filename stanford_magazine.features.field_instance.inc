@@ -26,12 +26,9 @@ function stanford_magazine_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -50,7 +47,7 @@ function stanford_magazine_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -63,7 +60,7 @@ function stanford_magazine_field_default_field_instances() {
     'description' => 'This is your byline. It identifies the author(s) of the article. ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -73,7 +70,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -133,15 +130,15 @@ function stanford_magazine_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'stanford_month_two_digit_date_year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 6,
@@ -150,7 +147,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -188,19 +185,20 @@ function stanford_magazine_field_default_field_instances() {
     'bundle' => 'stanford_magazine_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This is your dek. This displays a summary of your article.',
+    'description' => 'This is your dek. This displays a summary or teaser of your article. Please keep this under 180 characters.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 5,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 0,
       ),
     ),
@@ -246,7 +244,7 @@ function stanford_magazine_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
+        'rows' => 2,
       ),
       'type' => 'text_textarea',
       'weight' => 1,
@@ -258,24 +256,24 @@ function stanford_magazine_field_default_field_instances() {
   $field_instances['node-stanford_magazine_article-field_s_mag_article_image'] = array(
     'bundle' => 'stanford_magazine_article',
     'deleted' => 0,
-    'description' => 'This is your featured image. It will be used to identify this magazine article. When it displays it will be scaled and cropped to a ratio of 25:11 with a maximum size of 850x400px. For best results upload a larger image: 1700x800px
-',
+    'description' => 'This is your featured image. It will be used to identify this magazine article on pages such as a magazine issue page or any views pages.  When it displays it will be scaled and cropped to a ratio of 17:8 with a maximum size of 850x400px. For best image fidelity, upload a larger image (1700x800px).
+<p><i>if you want this to appear as the featured image for this magazine article, you must: </i></p>
+<ol>
+<li>insert it into the body field </li>
+<li>add caption and credits below the image as: <strong>caption | credits</strong></li>
+</ol>',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -288,7 +286,7 @@ function stanford_magazine_field_default_field_instances() {
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '3400x3000',
+      'max_resolution' => '3400x3400',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -297,12 +295,12 @@ function stanford_magazine_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'insert' => 0,
+        'insert' => 1,
         'insert_absolute' => 0,
         'insert_class' => '',
-        'insert_default' => 'auto',
+        'insert_default' => 'image_banner-850x400',
         'insert_styles' => array(
-          'auto' => 'auto',
+          'auto' => 0,
           'colorbox__3-col-header' => 0,
           'colorbox__4-col-header' => 0,
           'colorbox__6-col-banner' => 0,
@@ -364,7 +362,7 @@ function stanford_magazine_field_default_field_instances() {
           'image_9-col-banner-short' => 0,
           'image_12-col-banner' => 0,
           'image_12-col-banner-tall' => 0,
-          'image_banner-850x400' => 0,
+          'image_banner-850x400' => 'image_banner-850x400',
           'image_full-width-banner' => 0,
           'image_full-width-banner-short' => 0,
           'image_half-page-profile' => 0,
@@ -404,7 +402,7 @@ function stanford_magazine_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -430,7 +428,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -440,12 +438,12 @@ Each of these pre-defined paragraph types supports a different type of content.'
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
-        'p_buttons' => -1,
-        'p_callout' => -1,
-        'p_cards' => -1,
-        'p_hero' => -1,
+        'p_buttons' => 'p_buttons',
+        'p_callout' => 'p_callout',
+        'p_cards' => 'p_cards',
+        'p_hero' => 'p_hero',
         'p_menu' => -1,
-        'p_wysiwyg' => -1,
+        'p_wysiwyg' => 'p_wysiwyg',
       ),
       'bundle_weights' => array(
         'p_buttons' => 2,
@@ -488,7 +486,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -526,7 +524,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -559,9 +557,13 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('This identifies the series associated with this article. Select one or more series.');
   t('This identifies the topics associated with this article. Select one or more topics.');
   t('This is your byline. It identifies the author(s) of the article. ');
-  t('This is your dek. This displays a summary of your article.');
-  t('This is your featured image. It will be used to identify this magazine article. When it displays it will be scaled and cropped to a ratio of 25:11 with a maximum size of 850x400px. For best results upload a larger image: 1700x800px
-');
+  t('This is your dek. This displays a summary or teaser of your article. Please keep this under 180 characters.');
+  t('This is your featured image. It will be used to identify this magazine article on pages such as a magazine issue page or any views pages.  When it displays it will be scaled and cropped to a ratio of 17:8 with a maximum size of 850x400px. For best image fidelity, upload a larger image (1700x800px).
+<p><i>if you want this to appear as the featured image for this magazine article, you must: </i></p>
+<ol>
+<li>insert it into the body field </li>
+<li>add caption and credits below the image as: <strong>caption | credits</strong></li>
+</ol>');
   t('Topics');
 
   return $field_instances;
