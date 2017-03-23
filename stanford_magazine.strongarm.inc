@@ -13,6 +13,34 @@ function stanford_magazine_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_stanford_magazine_article';
+  $strongarm->value = 'edit-submission';
+  $export['additional_settings__active_tab_stanford_magazine_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_stanford_magazine_article';
+  $strongarm->value = '[node:field_s_mag_article_headline]';
+  $export['ant_pattern_stanford_magazine_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_stanford_magazine_article';
+  $strongarm->value = 0;
+  $export['ant_php_stanford_magazine_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_stanford_magazine_article';
+  $strongarm->value = '1';
+  $export['ant_stanford_magazine_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__stanford_magazine_article';
   $strongarm->value = array(
     'view_modes' => array(

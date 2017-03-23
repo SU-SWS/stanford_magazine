@@ -316,7 +316,7 @@ function stanford_magazine_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_s_mag_article_headline',
     'label' => 'Headline',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
