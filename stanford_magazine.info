@@ -23,6 +23,7 @@ dependencies[] = text
 features[ctools][] = ds:ds:1
 features[ctools][] = strongarm:strongarm:1
 features[ds_field_settings][] = node|stanford_magazine_article|full
+features[ds_layout_settings][] = node|stanford_magazine_article|full
 features[features_api][] = api:2
 features[field_base][] = body
 features[field_base][] = field_s_mag_article_byline

@@ -7,3 +7,33 @@
  */
 
 include_once 'stanford_magazine.features.inc';
+
+/**
+ * Default settings wrapper for variable_get
+ * @return array
+ *   Persistent settings for this module.
+ */
+function stanford_magazine_settings() {
+  $default_settings = array();
+  $settings = variable_get('stanford_magazine_settings', $default_settings );
+
+  return $settings;
+}
+
+/**
+ * Set the magazine article image fid.
+ */
+function stanford_magazine_article_set_image() {
+
+  // Get the image
+  $filename = "stanford_magazine_article_image.png";
+  $file_path = drupal_get_path('module', 'stanford_magazine') . "/images/" . $filename ;
+  $image = file_get_contents($file_path);
+
+  //Create a database entry.
+  $file = file_save_data($image, "public://" . $filename, FILE_EXISTS_REPLACE);
+
+  // And save the file id for default_image_ft to use.
+  variable_set('stanford_magazine_article_image', $file->fid);
+}
+

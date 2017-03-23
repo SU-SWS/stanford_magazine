@@ -10,30 +10,18 @@
  * Implements hook_install().
  */
 function stanford_magazine_install() {
-  // Populate the default {node_access} record.
-  /*
-   *db_insert('node_access')
-   *  ->fields(array(
-   *    'nid' => 0,
-   *    'gid' => 0,
-   *    'realm' => 'all',
-   *    'grant_view' => 1,
-   *    'grant_update' => 0,
-   *    'grant_delete' => 0,
-   *  ))
-   *  ->execute();
-   */
-  /* Your code here */
+
+  stanford_magazine_article_set_image();
 }
 
 /**
  * Implements hook_enable().
  */
 function stanford_magazine_enable() {
-  /*
-   *magazine_cache_rebuild();
-   */
-  /* Your code here */
+
+  // Initialize settings
+  //$settings = stanford_magazine_settings();
+  //variable_set('stanford_magazine_settings', $settings);
 }
 
 /**

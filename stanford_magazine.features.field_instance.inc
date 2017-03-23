@@ -129,7 +129,7 @@ function stanford_magazine_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 180,
+        'size' => 100,
       ),
       'type' => 'text_textfield',
       'weight' => 3,
@@ -324,6 +324,7 @@ function stanford_magazine_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'default_image_ft_source_var' => 'stanford_magazine_article_image',
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
