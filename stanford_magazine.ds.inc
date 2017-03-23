@@ -21,6 +21,11 @@ function stanford_magazine_ds_field_settings_info() {
       'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h1',
+        'class' => '',
+      ),
     ),
   );
   $export['node|stanford_magazine_article|full'] = $ds_fieldsetting;
