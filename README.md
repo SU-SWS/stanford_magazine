@@ -7,13 +7,40 @@ Maintainers: [boznik](https://github.com/boznik), [cjwest](https://github.com/cj
 [Changelog.txt](CHANGELOG.txt)
 
 The Stanford Magazine feature provides functionality for a digital (online) magazine. 
+When you enable the [Stanford Magazine](https://github.com/SU-SWS/stanford_magazine)
+module, you will get the Stanford Magazine Article content type and related taxonomies.
+Taxonomies include: Series and topic.
+
+***URLs***
+- *magazine/article/\<article-title\>* - Displays a magazine article.
 
 
 Sub Modules
 ---
+**[Stanford Magazine Article Views](https://github.com/SU-SWS/stanford_magazine/stanford_mag_article_views/)**
+This module provides views for Magazine Articles including taxonomy related views.
 
-**[Stanford Magazine Sub Module](https://github.com/SU-SWS/stanford_magazine/modules/)**
-This module provides
+***URLs***
+- *magazine/all* and *magazine* - Displays all magazine articles sorted by date, newest to oldest.
+- *magazine/\<topic\>* - Displays magazine articles related to this topic sorted by date, newest to oldest.
+- *magazine/\<series\>* - Displays magazine articles related to this series sorted by date, newest to oldest.
+
+**[Stanford Magazine Issue](https://github.com/SU-SWS/stanford_magazine/stanford_mag_issue/)**
+This module provides the Magazine Issue content type. 
+This is a "container" content type for Magazine Articles.
+There are five articles per issue. 
+Using Display Suite view modes and Contextual View Modes, 
+you can select from multiple view modes for displaying each issue.
+
+***URLs***
+- *magazine/issue/\<number\>* - Displays a single magazine issue.
+ 
+
+**[Stanford Magazine Issue Views](https://github.com/SU-SWS/stanford_magazine/stanford_mag_issue_views/)**
+This module provides views for Magazine Issues. 
+
+***URLs***
+- *magazine/issue* and *magazine/issue/all* - Displays all the magazines sorted by date
 
 Installation
 ---
