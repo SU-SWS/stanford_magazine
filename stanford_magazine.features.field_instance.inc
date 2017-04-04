@@ -287,6 +287,53 @@ function stanford_magazine_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-stanford_magazine_article-field_s_mag_article_eyebrow'.
+  $field_instances['node-stanford_magazine_article-field_s_mag_article_eyebrow'] = array(
+    'bundle' => 'stanford_magazine_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_mag_article_eyebrow',
+    'label' => 'Eyebrow',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-stanford_magazine_article-field_s_mag_article_headline'.
   $field_instances['node-stanford_magazine_article-field_s_mag_article_headline'] = array(
     'bundle' => 'stanford_magazine_article',
@@ -600,7 +647,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
     'bundle' => 'stanford_magazine_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This identifies the series associated with this article. Select one or more series.',
+    'description' => 'These terms identify the series associated with this article. Select one or more series.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -643,7 +690,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
     'bundle' => 'stanford_magazine_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This identifies the topics associated with this article. Select one or more topics.',
+    'description' => 'These terms identify the topics associated with this article. Select one or more topics.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -687,6 +734,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('Body');
   t('Byline');
   t('Dek');
+  t('Eyebrow');
   t('Featured Image');
   t('Headline');
   t('Publishing Date');
@@ -694,8 +742,9 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('Series');
   t('These are the paragraphs for your article. 
 Each of these pre-defined paragraph types supports a different type of content.');
-  t('This identifies the series associated with this article. Select one or more series.');
-  t('This identifies the topics associated with this article. Select one or more topics.');
+  t('These terms identify the series associated with this article. Select one or more series.');
+  t('These terms identify the topics associated with this article. Select one or more topics.');
+  t('This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.');
   t('This is your byline. It identifies the author(s) of the article. ');
   t('This is your dek. This displays a summary or teaser of your article. Please keep this under 180 characters.');
   t('This is your featured image. It will be used to identify this magazine article on pages such as a magazine issue page or any views pages.  When it displays it will be scaled and cropped to a ratio of 17:8 with a maximum size of 850x400px. For best image fidelity, upload a larger image (1700x800px).
