@@ -12,6 +12,8 @@
 function stanford_magazine_install() {
 
   stanford_magazine_article_set_image();
+  _stanford_magazine_add_dept_field();
+
 }
 
 /**
@@ -42,3 +44,103 @@ function stanford_magazine_uninstall() {
    *variable_del('upload_file_types');
    */
 }
+
+/**
+ * Add the department field to the magazine article
+ *
+ * If the stanford_department vocabulary exists, then add the
+ * field to the magazine article. We're doing it this way because
+ * the stanford_department vocabulary is defined in a separate, unrelated
+ * module.
+ *
+ * @param none
+ */
+function _stanford_magazine_add_dept_field() {
+
+  $tax = taxonomy_vocabulary_machine_name_load("stanford_department");
+  if ($tax) {
+    $field_name = 'field_s_mag_article_dept';
+
+    // Make sure the field doesn't already exist.
+    if (field_info_field($field_name)) {
+      watchdog('stanford_magazine', t('!field_name already exists.', array('!field_name' => $field_name)));
+    }
+    else {
+      // Create the field.
+      $field_base = array(
+        'field_name' => $field_name,
+        'active' => 1,
+        'cardinality' => -1,
+        'deleted' => 0,
+        'entity_types' => array(),
+        'indexes' => array(
+          'tid' => array(
+            0 => 'tid',
+          ),
+        ),
+        'locked' => 0,
+        'module' => 'taxonomy',
+        'settings' => array(
+          'allowed_values' => array(
+            0 => array(
+              'vocabulary' => 'stanford_department',
+              'parent' => 0,
+            ),
+          ),
+        ),
+        'translatable' => 0,
+        'type' => 'taxonomy_term_reference',
+      );
+      field_create_field($field_base);
+
+      // Create the instance.
+
+      $field_instance = array(
+        'bundle' => 'stanford_magazine_article',
+        'default_value' => NULL,
+        'deleted' => 0,
+        'description' => 'These terms identify the departments associated with this article. Select one or more department.',
+        'display' => array(
+          'default' => array(
+            'label' => 'hidden',
+            'module' => 'taxonomy',
+            'settings' => array(),
+            'type' => 'taxonomy_term_reference_link',
+            'weight' => 0,
+          ),
+          'full' => array(
+            'label' => 'hidden',
+            'module' => 'taxonomy',
+            'settings' => array(),
+            'type' => 'taxonomy_term_reference_link',
+            'weight' => 0,
+          ),
+          'teaser' => array(
+            'label' => 'above',
+            'settings' => array(),
+            'type' => 'hidden',
+            'weight' => 6,
+          ),
+        ),
+        'entity_type' => 'node',
+        'field_name' => 'field_s_mag_article_dept',
+        'label' => 'Department',
+        'required' => 0,
+        'settings' => array(
+          'user_register_form' => FALSE,
+        ),
+        'widget' => array(
+          'active' => 1,
+          'module' => 'options',
+          'settings' => array(),
+          'type' => 'options_buttons',
+          'weight' => 8,
+        ),
+
+      );
+      field_create_instance($field_instance);
+      watchdog('stanford_magazine', t('!field_name was added successfully.', array('!field_name' => $field_name)));
+    }
+  }
+}
+

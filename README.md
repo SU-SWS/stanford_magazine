@@ -11,6 +11,13 @@ When you enable the [Stanford Magazine](https://github.com/SU-SWS/stanford_magaz
 module, you will get the Stanford Magazine Article content type and related taxonomies.
 Taxonomies include: Series and topic.
 
+***Image Handling***
+
+Image aspect ratios across structured content for the Magazine content types will be:
+850 x 400
+For the full width, that translates to:
+3200 x 1505
+
 ***URLs***
 - *magazine/article/\<article-title\>* - Displays a magazine article.
 
