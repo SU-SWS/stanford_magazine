@@ -46,6 +46,15 @@ function stanford_magazine_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in stanford_magazine_eyebrow'.
+  $permissions['delete terms in stanford_magazine_eyebrow'] = array(
+    'name' => 'delete terms in stanford_magazine_eyebrow',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'delete terms in stanford_magazine_series'.
   $permissions['delete terms in stanford_magazine_series'] = array(
     'name' => 'delete terms in stanford_magazine_series',
@@ -80,6 +89,15 @@ function stanford_magazine_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in stanford_magazine_eyebrow'.
+  $permissions['edit terms in stanford_magazine_eyebrow'] = array(
+    'name' => 'edit terms in stanford_magazine_eyebrow',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'taxonomy',
   );
 
   // Exported permission: 'edit terms in stanford_magazine_series'.
