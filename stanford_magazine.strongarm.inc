@@ -154,15 +154,22 @@ function stanford_magazine_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_stanford_magazine_eyebrow_pattern';
+  $strongarm->value = 'magazine/[term:name]';
+  $export['pathauto_taxonomy_term_stanford_magazine_eyebrow_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_stanford_magazine_series_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'magazine/[term:name]';
   $export['pathauto_taxonomy_term_stanford_magazine_series_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_stanford_magazine_topics_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'magazine/[term:name]';
   $export['pathauto_taxonomy_term_stanford_magazine_topics_pattern'] = $strongarm;
 
   return $export;
