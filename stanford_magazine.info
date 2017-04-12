@@ -80,5 +80,6 @@ features[variable][] = pathauto_taxonomy_term_stanford_magazine_topics_pattern
 features_exclude[dependencies][stanford_news_extras] = stanford_news_extras
 features_exclude[field_base][field_s_mag_article_dept] = field_s_mag_article_dept
 features_exclude[field_instance][node-stanford_magazine_article-field_s_mag_article_dept] = node-stanford_magazine_article-field_s_mag_article_dept
+features_exclude[variable][pathauto_taxonomy_term_stanford_department_pattern] = pathauto_taxonomy_term_stanford_department_pattern
 files[] = stanford_magazine.install
 project status url = https://github.com/SU-SWS/stanford_magazine
