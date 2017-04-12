@@ -453,15 +453,15 @@ function stanford_magazine_field_default_field_instances() {
   $field_instances['node-stanford_magazine_article-field_s_mag_article_image'] = array(
     'bundle' => 'stanford_magazine_article',
     'deleted' => 0,
-    'description' => 'This is your featured image. It will be used to identify this magazine article on pages such as a magazine issue page or any views pages.  When it displays it will be scaled and cropped to a ratio of 17:8 with a maximum size of 850x400px. For best image fidelity, upload a larger image (1700x800px).
-<p><i>if you want this to appear as the featured image for this magazine article, you must: </i></p>
-<ol>
-<li>insert it into the <strong>Featured image/video insert</strong> field </li>
-<li>add caption and credits below the image as: <strong>caption | credits</strong></li>
-</ol>
+    'description' => '<p>This is your <strong>featured image</strong>. It will be used to identify this magazine article on pages such as a magazine issue page or any other views pages. When it displays it will be scaled and cropped to a ratio of 17:8. For best image fidelity—across all views except the featured Issue image (see below for specs)—upload this image size: 1700x800px. </p>
 
-<p>This article may be part of a magazine issue.<p>
-<p>If this article is to be used as the <strong>Featured image</strong> for a <strong>Magazine issue</strong>, <em>for best fidelity upload an image size 3200x1505px.</em></p>
+<p>However, if this is to be the featured article in a <strong>Magazine Issue</strong>, upload an image size of 3200x1505px.</p>
+
+<p><em>If you also want this image to appear on your article detail page, or if you want to embed a video instead of an image you must:</em></p>
+<ol>
+<li>Insert it into the <strong>Featured image/video insert</strong> field below</li>
+<li>Add caption and credits below the image as: <strong>Caption | Credits</strong></li>
+</ol>
 ',
     'display' => array(
       'default' => array(
@@ -776,6 +776,16 @@ Each of these pre-defined paragraph types supports a different type of content.'
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<p>This is your <strong>featured image</strong>. It will be used to identify this magazine article on pages such as a magazine issue page or any other views pages. When it displays it will be scaled and cropped to a ratio of 17:8. For best image fidelity—across all views except the featured Issue image (see below for specs)—upload this image size: 1700x800px. </p>
+
+<p>However, if this is to be the featured article in a <strong>Magazine Issue</strong>, upload an image size of 3200x1505px.</p>
+
+<p><em>If you also want this image to appear on your article detail page, or if you want to embed a video instead of an image you must:</em></p>
+<ol>
+<li>Insert it into the <strong>Featured image/video insert</strong> field below</li>
+<li>Add caption and credits below the image as: <strong>Caption | Credits</strong></li>
+</ol>
+');
   t('<p>This text area displays the featured image or video. </p>
 
 <p>To display an <strong>image</strong>: use the <strong>Featured image</strong> field to upload and insert an image.
@@ -801,16 +811,6 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.');
   t('This is your byline. It identifies the author(s) of the article. ');
   t('This is your dek. This displays a summary or teaser of your article. Please keep this under 180 characters.');
-  t('This is your featured image. It will be used to identify this magazine article on pages such as a magazine issue page or any views pages.  When it displays it will be scaled and cropped to a ratio of 17:8 with a maximum size of 850x400px. For best image fidelity, upload a larger image (1700x800px).
-<p><i>if you want this to appear as the featured image for this magazine article, you must: </i></p>
-<ol>
-<li>insert it into the <strong>Featured image/video insert</strong> field </li>
-<li>add caption and credits below the image as: <strong>caption | credits</strong></li>
-</ol>
-
-<p>This article may be part of a magazine issue.<p>
-<p>If this article is to be used as the <strong>Featured image</strong> for a <strong>Magazine issue</strong>, <em>for best fidelity upload an image size 3200x1505px.</em></p>
-');
   t('Topics');
 
   return $field_instances;
