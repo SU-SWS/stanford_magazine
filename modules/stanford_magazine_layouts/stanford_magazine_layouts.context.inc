@@ -22,7 +22,7 @@ function stanford_magazine_layouts_context_default_contexts() {
         'stanford_magazine_article' => 'stanford_magazine_article',
       ),
       'options' => array(
-        'node_form' => '1',
+        'node_form' => '0',
       ),
     ),
   );
