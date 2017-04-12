@@ -15,7 +15,15 @@ function stanford_magazine_field_default_field_instances() {
     'bundle' => 'stanford_magazine_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => '<p>This text area displays the featured image or video. </p>
+
+<p>To display an <strong>image</strong>: use the <strong>Featured image</strong> field to upload and insert an image.
+<p>To display a <strong>video</strong>:
+<ol>
+<li>Select the "Full HTML" Text format</li>
+<li>Copy and paste the video embed code </li>
+</ol>
+</p>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -40,14 +48,45 @@ function stanford_magazine_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'label' => 'Featured image/video insert',
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'content_editor_text_format' => 'content_editor_text_format',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'minimal_html' => 'minimal_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'content_editor_text_format' => array(
+              'weight' => -10,
+            ),
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'minimal_html' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
+      ),
+      'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -417,9 +456,13 @@ function stanford_magazine_field_default_field_instances() {
     'description' => 'This is your featured image. It will be used to identify this magazine article on pages such as a magazine issue page or any views pages.  When it displays it will be scaled and cropped to a ratio of 17:8 with a maximum size of 850x400px. For best image fidelity, upload a larger image (1700x800px).
 <p><i>if you want this to appear as the featured image for this magazine article, you must: </i></p>
 <ol>
-<li>insert it into the body field </li>
+<li>insert it into the <strong>Featured image/video insert</strong> field </li>
 <li>add caption and credits below the image as: <strong>caption | credits</strong></li>
-</ol>',
+</ol>
+
+<p>This article may be part of a magazine issue.<p>
+<p>If this article is to be used as the <strong>Featured image</strong> for a <strong>Magazine issue</strong>, <em>for best fidelity upload an image size 3200x1505px.</em></p>
+',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -482,6 +525,7 @@ function stanford_magazine_field_default_field_instances() {
           'colorbox__banner-850x400' => 0,
           'colorbox__full-width-banner' => 0,
           'colorbox__full-width-banner-short' => 0,
+          'colorbox__full_width_banner_tall' => 0,
           'colorbox__half-page-profile' => 0,
           'colorbox__header_scale_850x400' => 0,
           'colorbox__huge-landscape' => 0,
@@ -530,6 +574,7 @@ function stanford_magazine_field_default_field_instances() {
           'image_banner-850x400' => 'image_banner-850x400',
           'image_full-width-banner' => 0,
           'image_full-width-banner-short' => 0,
+          'image_full_width_banner_tall' => 0,
           'image_half-page-profile' => 0,
           'image_header_scale_850x400' => 0,
           'image_huge-landscape' => 0,
@@ -731,11 +776,20 @@ Each of these pre-defined paragraph types supports a different type of content.'
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Body');
+  t('<p>This text area displays the featured image or video. </p>
+
+<p>To display an <strong>image</strong>: use the <strong>Featured image</strong> field to upload and insert an image.
+<p>To display a <strong>video</strong>:
+<ol>
+<li>Select the "Full HTML" Text format</li>
+<li>Copy and paste the video embed code </li>
+</ol>
+</p>');
   t('Byline');
   t('Dek');
   t('Eyebrow');
   t('Featured Image');
+  t('Featured image/video insert');
   t('Headline');
   t('Publishing Date');
   t('Sections');
@@ -750,9 +804,13 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('This is your featured image. It will be used to identify this magazine article on pages such as a magazine issue page or any views pages.  When it displays it will be scaled and cropped to a ratio of 17:8 with a maximum size of 850x400px. For best image fidelity, upload a larger image (1700x800px).
 <p><i>if you want this to appear as the featured image for this magazine article, you must: </i></p>
 <ol>
-<li>insert it into the body field </li>
+<li>insert it into the <strong>Featured image/video insert</strong> field </li>
 <li>add caption and credits below the image as: <strong>caption | credits</strong></li>
-</ol>');
+</ol>
+
+<p>This article may be part of a magazine issue.<p>
+<p>If this article is to be used as the <strong>Featured image</strong> for a <strong>Magazine issue</strong>, <em>for best fidelity upload an image size 3200x1505px.</em></p>
+');
   t('Topics');
 
   return $field_instances;
