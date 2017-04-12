@@ -31,6 +31,8 @@ This module provides views for Magazine Articles including taxonomy related view
 - *magazine/all* and *magazine* - Displays all magazine articles sorted by date, newest to oldest.
 - *magazine/\<topic\>* - Displays magazine articles related to this topic sorted by date, newest to oldest.
 - *magazine/\<series\>* - Displays magazine articles related to this series sorted by date, newest to oldest.
+- *magazine/\<eyebrow\>* - Displays magazine articles related to this eyebrow sorted by date, newest to oldest.
+- *magazine/\<department\>* - Displays magazine articles related to this department sorted by date, newest to oldest.
 
 **[Stanford Magazine Issue](https://github.com/SU-SWS/stanford_magazine/stanford_mag_issue/)**
 This module provides the Magazine Issue content type. 

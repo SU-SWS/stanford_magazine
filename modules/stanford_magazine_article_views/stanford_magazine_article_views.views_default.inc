@@ -68,7 +68,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
   $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid']['exception']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['tid']['exception']['title'] = 'People';
   $handler->display->display_options['arguments']['tid']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['tid']['title'] = '%1';
@@ -80,6 +79,8 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'stanford_department' => 'stanford_department',
+    'stanford_magazine_eyebrow' => 'stanford_magazine_eyebrow',
     'stanford_magazine_series' => 'stanford_magazine_series',
     'stanford_magazine_topics' => 'stanford_magazine_topics',
   );
