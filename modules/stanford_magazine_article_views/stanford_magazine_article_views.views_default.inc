@@ -40,6 +40,17 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  /* Field: Content: Featured Image */
+  $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
+  $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
+  $handler->display->display_options['fields']['field_s_mag_article_image']['field'] = 'field_s_mag_article_image';
+  $handler->display->display_options['fields']['field_s_mag_article_image']['label'] = '';
+  $handler->display->display_options['fields']['field_s_mag_article_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_article_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_s_mag_article_image']['settings'] = array(
+    'image_style' => 'sm-landscape',
+    'image_link' => '',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -58,17 +69,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['element_wrapper_class'] = 'edit-link';
   $handler->display->display_options['fields']['edit_node']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'Edit';
-  /* Field: Content: Featured Image */
-  $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
-  $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
-  $handler->display->display_options['fields']['field_s_mag_article_image']['field'] = 'field_s_mag_article_image';
-  $handler->display->display_options['fields']['field_s_mag_article_image']['label'] = '';
-  $handler->display->display_options['fields']['field_s_mag_article_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_s_mag_article_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_s_mag_article_image']['settings'] = array(
-    'image_style' => 'sm-landscape',
-    'image_link' => '',
-  );
   /* Sort criterion: Content: Publishing Date (field_s_mag_article_date) */
   $handler->display->display_options['sorts']['field_s_mag_article_date_value']['id'] = 'field_s_mag_article_date_value';
   $handler->display->display_options['sorts']['field_s_mag_article_date_value']['table'] = 'field_data_field_s_mag_article_date';
