@@ -62,6 +62,8 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['field'] = 'field_s_mag_article_image';
+  $handler->display->display_options['fields']['field_s_mag_article_image']['label'] = '';
+  $handler->display->display_options['fields']['field_s_mag_article_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_mag_article_image']['settings'] = array(
     'image_style' => 'sm-landscape',
