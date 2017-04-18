@@ -127,14 +127,14 @@ function stanford_magazine_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'body',
+        0 => 'field_s_mag_article_image',
         1 => 'field_s_mag_article_date',
         2 => 'field_s_mag_article_headline',
         3 => 'field_s_mag_article_topics',
       ),
     ),
     'fields' => array(
-      'body' => 'ds_content',
+      'field_s_mag_article_image' => 'ds_content',
       'field_s_mag_article_date' => 'ds_content',
       'field_s_mag_article_headline' => 'ds_content',
       'field_s_mag_article_topics' => 'ds_content',

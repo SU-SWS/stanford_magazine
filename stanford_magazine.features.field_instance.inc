@@ -48,10 +48,9 @@ function stanford_magazine_field_default_field_instances() {
       ),
       'stanford_mag_article' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -143,7 +142,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -325,7 +324,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -415,7 +414,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -569,9 +568,13 @@ function stanford_magazine_field_default_field_instances() {
       ),
       'stanford_mag_article' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 10,
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'banner-850x400',
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -750,7 +753,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -825,7 +828,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
