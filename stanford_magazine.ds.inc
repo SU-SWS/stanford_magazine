@@ -84,5 +84,100 @@ function stanford_magazine_ds_layout_settings_info() {
   );
   $export['node|stanford_magazine_article|full'] = $ds_layout;
 
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|stanford_magazine_article|stanford_featured_mag_article';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'stanford_magazine_article';
+  $ds_layout->view_mode = 'stanford_featured_mag_article';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'body',
+        1 => 'field_s_mag_article_topics',
+        2 => 'field_s_mag_article_headline',
+        3 => 'field_s_mag_article_dek',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'ds_content',
+      'field_s_mag_article_topics' => 'ds_content',
+      'field_s_mag_article_headline' => 'ds_content',
+      'field_s_mag_article_dek' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|stanford_magazine_article|stanford_featured_mag_article'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|stanford_magazine_article|stanford_mag_article';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'stanford_magazine_article';
+  $ds_layout->view_mode = 'stanford_mag_article';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'body',
+        1 => 'field_s_mag_article_date',
+        2 => 'field_s_mag_article_headline',
+        3 => 'field_s_mag_article_topics',
+      ),
+    ),
+    'fields' => array(
+      'body' => 'ds_content',
+      'field_s_mag_article_date' => 'ds_content',
+      'field_s_mag_article_headline' => 'ds_content',
+      'field_s_mag_article_topics' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|stanford_magazine_article|stanford_mag_article'] = $ds_layout;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_view_modes_info().
+ */
+function stanford_magazine_ds_view_modes_info() {
+  $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'stanford_featured_mag_article';
+  $ds_view_mode->label = 'Featured Article';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['stanford_featured_mag_article'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'stanford_mag_article';
+  $ds_view_mode->label = 'Magazine Article';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['stanford_mag_article'] = $ds_view_mode;
+
   return $export;
 }

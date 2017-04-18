@@ -86,6 +86,21 @@ function stanford_magazine_strongarm() {
       'stanford_engineering' => array(
         'custom_settings' => FALSE,
       ),
+      'stanford_featured_mag_article' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_mag_article' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_mag_featured_center' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_mag_featured_left' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_mag_featured_right' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -162,14 +177,14 @@ function stanford_magazine_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_stanford_magazine_series_pattern';
-  $strongarm->value = 'magazine/[term:name]';
+  $strongarm->value = '';
   $export['pathauto_taxonomy_term_stanford_magazine_series_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_stanford_magazine_topics_pattern';
-  $strongarm->value = 'magazine/[term:name]';
+  $strongarm->value = '';
   $export['pathauto_taxonomy_term_stanford_magazine_topics_pattern'] = $strongarm;
 
   return $export;
