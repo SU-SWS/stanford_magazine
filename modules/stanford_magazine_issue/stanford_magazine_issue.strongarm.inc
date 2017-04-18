@@ -13,6 +13,44 @@ function stanford_magazine_issue_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_stanford_magazine_issue';
+  $strongarm->value = 'edit-auto-nodetitle';
+  $export['additional_settings__active_tab_stanford_magazine_issue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_stanford_magazine_issue';
+  $strongarm->value = 'Issue #[node:field_s_mag_issue_number]';
+  $export['ant_pattern_stanford_magazine_issue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_stanford_magazine_issue';
+  $strongarm->value = 0;
+  $export['ant_php_stanford_magazine_issue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_stanford_magazine_issue';
+  $strongarm->value = '1';
+  $export['ant_stanford_magazine_issue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_view_modes_stanford_magazine_issue';
+  $strongarm->value = array(
+    0 => 'default',
+    1 => 'teaser',
+  );
+  $export['ds_extras_view_modes_stanford_magazine_issue'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__stanford_magazine_issue';
   $strongarm->value = array(
     'view_modes' => array(
@@ -53,6 +91,21 @@ function stanford_magazine_issue_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_mag_featured_center' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_mag_featured_left' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_mag_featured_right' => array(
+        'custom_settings' => TRUE,
+      ),
+      'stanford_featured_mag_article' => array(
+        'custom_settings' => FALSE,
+      ),
+      'stanford_mag_article' => array(
         'custom_settings' => FALSE,
       ),
     ),
