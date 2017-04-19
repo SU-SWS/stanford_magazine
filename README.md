@@ -9,18 +9,26 @@ Maintainers: [boznik](https://github.com/boznik), [cjwest](https://github.com/cj
 The Stanford Magazine feature provides functionality for a digital (online) magazine. 
 When you enable the [Stanford Magazine](https://github.com/SU-SWS/stanford_magazine)
 module, you will get the Stanford Magazine Article content type and related taxonomies.
-Taxonomies include: Series and topic.
+
+***Taxonomies*** 
+- Series
+- Topic
 
 ***Image Handling***
 
 Image aspect ratios across structured content for the Magazine content types will be:
-850 x 400
-For the full width, that translates to:
-3200 x 1505
+850 x 400. That translates to:
+- Full width: 3200x1505 (Full Width Banner Tall)
+- Page width: 850x400   (banner (850x400))
+- Two column: 570x270 (6-col-banner-short)
+
+***Video***
+
+On a magazine article, you have an option to upload a video in lieu of the featured image. 
+If there is a video, it will show only on the node display page.
 
 ***URLs***
 - *magazine/article/\<article-title\>* - Displays a magazine article.
-
 
 Sub Modules
 ---
