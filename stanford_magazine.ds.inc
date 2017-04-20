@@ -18,7 +18,7 @@ function stanford_magazine_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'title' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -49,9 +49,9 @@ function stanford_magazine_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'field_s_mag_article_topics',
-        1 => 'title',
-        2 => 'field_s_mag_article_dek',
+        0 => 'title',
+        1 => 'field_s_mag_article_dek',
+        2 => 'field_s_mag_article_topics',
         3 => 'field_s_mag_article_date',
         4 => 'field_s_mag_article_byline',
         5 => 'body',
@@ -60,9 +60,9 @@ function stanford_magazine_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
-      'field_s_mag_article_topics' => 'ds_content',
       'title' => 'ds_content',
       'field_s_mag_article_dek' => 'ds_content',
+      'field_s_mag_article_topics' => 'ds_content',
       'field_s_mag_article_date' => 'ds_content',
       'field_s_mag_article_byline' => 'ds_content',
       'body' => 'ds_content',
@@ -94,26 +94,36 @@ function stanford_magazine_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'body',
-        1 => 'field_s_mag_article_topics',
-        2 => 'field_s_mag_article_headline',
-        3 => 'field_s_mag_article_dek',
+        0 => 'group_s_mag_article_feat_style',
+        1 => 'group_s_mag_article_image_style',
+        2 => 'group_s_mag_article_contnt_style',
+        3 => 'body',
+        4 => 'field_s_mag_article_topics',
+        5 => 'field_s_mag_article_headline',
+        6 => 'field_s_mag_article_dek',
       ),
     ),
     'fields' => array(
+      'group_s_mag_article_feat_style' => 'ds_content',
+      'group_s_mag_article_image_style' => 'ds_content',
+      'group_s_mag_article_contnt_style' => 'ds_content',
       'body' => 'ds_content',
       'field_s_mag_article_topics' => 'ds_content',
       'field_s_mag_article_headline' => 'ds_content',
       'field_s_mag_article_dek' => 'ds_content',
     ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
+    'hide_page_title' => '0',
+    'page_option_title' => '',
   );
   $export['node|stanford_magazine_article|stanford_featured_mag_article'] = $ds_layout;
 

@@ -87,10 +87,10 @@ function stanford_magazine_strongarm() {
         'custom_settings' => FALSE,
       ),
       'stanford_featured_mag_article' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'stanford_mag_article' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'stanford_mag_featured_center' => array(
         'custom_settings' => FALSE,
