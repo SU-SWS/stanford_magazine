@@ -35,6 +35,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Accent color */
+  $handler->display->display_options['fields']['field_s_banner_accent_color']['id'] = 'field_s_banner_accent_color';
+  $handler->display->display_options['fields']['field_s_banner_accent_color']['table'] = 'field_data_field_s_banner_accent_color';
+  $handler->display->display_options['fields']['field_s_banner_accent_color']['field'] = 'field_s_banner_accent_color';
+  $handler->display->display_options['fields']['field_s_banner_accent_color']['label'] = '';
+  $handler->display->display_options['fields']['field_s_banner_accent_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_banner_accent_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_banner_accent_color']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -132,6 +140,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['relationships']['field_s_mag_issue_article_2_target_id']['field'] = 'field_s_mag_issue_article_2_target_id';
   $handler->display->display_options['relationships']['field_s_mag_issue_article_2_target_id']['label'] = '2nd Article';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Accent color */
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['id'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['table'] = 'field_data_field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['field'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['label'] = '';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -201,7 +217,7 @@ function stanford_magazine_issue_views_default_views() {
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
   <a href="node/[nid]">
-    <h2 class="mag-article-title">[field_s_mag_article_headline]</h2>
+    <h2 class="mag-article-title [field_s_mag_issue_accent_color]">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
 </div>';
@@ -216,6 +232,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['relationships']['field_s_mag_issue_article_3_target_id']['field'] = 'field_s_mag_issue_article_3_target_id';
   $handler->display->display_options['relationships']['field_s_mag_issue_article_3_target_id']['label'] = '3rd Article';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Accent color */
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['id'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['table'] = 'field_data_field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['field'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['label'] = '';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -279,13 +303,13 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="node/[nid]">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = ' <a href="node/[nid]">
   <div class="mag-article-image">[field_s_mag_article_image] </div>
 </a>
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
   <a href="node/[nid]">
-    <h2 class="mag-article-title">[field_s_mag_article_headline]</h2>
+    <h2 class="mag-article-title [field_s_mag_issue_accent_color]">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
 </div>';
@@ -300,6 +324,13 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['relationships']['field_s_mag_issue_article_4_target_id']['field'] = 'field_s_mag_issue_article_4_target_id';
   $handler->display->display_options['relationships']['field_s_mag_issue_article_4_target_id']['label'] = '4th Article';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Accent color */
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['id'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['table'] = 'field_data_field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['field'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['label'] = '';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -369,7 +400,7 @@ function stanford_magazine_issue_views_default_views() {
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
   <a href="node/[nid]">
-    <h2 class="mag-article-title">[field_s_mag_article_headline]</h2>
+    <h2 class="mag-article-title [field_s_mag_issue_accent_color]">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
 </div>';
@@ -384,6 +415,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['relationships']['field_s_mag_issue_article_5_target_id']['field'] = 'field_s_mag_issue_article_5_target_id';
   $handler->display->display_options['relationships']['field_s_mag_issue_article_5_target_id']['label'] = '5th Article ';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Accent color */
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['id'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['table'] = 'field_data_field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['field'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['label'] = '';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -453,7 +492,7 @@ function stanford_magazine_issue_views_default_views() {
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
   <a href="node/[nid]">
-    <h2 class="mag-article-title">[field_s_mag_article_headline]</h2>
+    <h2 class="mag-article-title [field_s_mag_issue_accent_color] ">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
 </div>';
@@ -486,6 +525,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['relationships']['field_s_mag_issue_featured_target_id']['table'] = 'field_data_field_s_mag_issue_featured';
   $handler->display->display_options['relationships']['field_s_mag_issue_featured_target_id']['field'] = 'field_s_mag_issue_featured_target_id';
   $handler->display->display_options['relationships']['field_s_mag_issue_featured_target_id']['label'] = 'Featured Article';
+  /* Field: Content: Accent color */
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['id'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['table'] = 'field_data_field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['field'] = 'field_s_mag_issue_accent_color';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['label'] = '';
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -569,7 +616,7 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="node/[nid]">
   <div class="mag-feat-image-container">
     <div>[field_s_mag_article_image]</div>
-    <h2>Digital Magazine | [title]</h2>
+    <h2 class="mag-issue-color-[field_s_mag_issue_accent_color]">Digital Magazine | [title]</h2>
     <p>Scroll to <strong>Explore</strong></p>
   </div>
 </a>
