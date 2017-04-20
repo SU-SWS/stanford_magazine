@@ -31,6 +31,13 @@ function stanford_magazine_issue_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'delete terms in stanford_mag_issue_layout'.
+  $permissions['delete terms in stanford_mag_issue_layout'] = array(
+    'name' => 'delete terms in stanford_mag_issue_layout',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: 'edit any stanford_magazine_issue content'.
   $permissions['edit any stanford_magazine_issue content'] = array(
     'name' => 'edit any stanford_magazine_issue content',
@@ -43,6 +50,13 @@ function stanford_magazine_issue_user_default_permissions() {
     'name' => 'edit own stanford_magazine_issue content',
     'roles' => array(),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in stanford_mag_issue_layout'.
+  $permissions['edit terms in stanford_mag_issue_layout'] = array(
+    'name' => 'edit terms in stanford_mag_issue_layout',
+    'roles' => array(),
+    'module' => 'taxonomy',
   );
 
   return $permissions;
