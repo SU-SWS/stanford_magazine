@@ -14,7 +14,7 @@ function stanford_magazine_issue_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_stanford_magazine_issue';
-  $strongarm->value = 'edit-auto-nodetitle';
+  $strongarm->value = 'edit-ds-extras';
   $export['additional_settings__active_tab_stanford_magazine_issue'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -45,6 +45,9 @@ function stanford_magazine_issue_strongarm() {
   $strongarm->value = array(
     0 => 'default',
     1 => 'teaser',
+    2 => 'stanford_mag_featured_center',
+    3 => 'stanford_mag_featured_left',
+    4 => 'stanford_mag_featured_right',
   );
   $export['ds_extras_view_modes_stanford_magazine_issue'] = $strongarm;
 
@@ -58,7 +61,7 @@ function stanford_magazine_issue_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -94,13 +97,13 @@ function stanford_magazine_issue_strongarm() {
         'custom_settings' => FALSE,
       ),
       'stanford_mag_featured_center' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'stanford_mag_featured_left' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'stanford_mag_featured_right' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'stanford_featured_mag_article' => array(
         'custom_settings' => FALSE,
@@ -112,19 +115,19 @@ function stanford_magazine_issue_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '10',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '5',
+          'weight' => '7',
         ),
         'redirect' => array(
-          'weight' => '6',
+          'weight' => '8',
         ),
         'xmlsitemap' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
       ),
       'display' => array(),

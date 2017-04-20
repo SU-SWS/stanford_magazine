@@ -29,33 +29,33 @@ function stanford_magazine_issue_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'ds_extras-stanford_featured_article' => array(
-          'module' => 'ds_extras',
-          'delta' => 'stanford_featured_article',
+        'views-da518116e8552578c364fd1694557979' => array(
+          'module' => 'views',
+          'delta' => 'da518116e8552578c364fd1694557979',
           'region' => 'fullwidth_top',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
-        'ds_extras-stanford_article_2' => array(
-          'module' => 'ds_extras',
-          'delta' => 'stanford_article_2',
+        'views-ce0be3cba2a345e031d9e347a82d8508' => array(
+          'module' => 'views',
+          'delta' => 'ce0be3cba2a345e031d9e347a82d8508',
           'region' => 'content_row2',
           'weight' => '-10',
         ),
-        'ds_extras-stanford_article_3' => array(
-          'module' => 'ds_extras',
-          'delta' => 'stanford_article_3',
+        'views-5734dd8d161989827de5bdc49ae3084d' => array(
+          'module' => 'views',
+          'delta' => '5734dd8d161989827de5bdc49ae3084d',
           'region' => 'content_row2',
           'weight' => '-9',
         ),
-        'ds_extras-stanford_article_4' => array(
-          'module' => 'ds_extras',
-          'delta' => 'stanford_article_4',
+        'views-ca8638058ca82b9d56f9a92c63997800' => array(
+          'module' => 'views',
+          'delta' => 'ca8638058ca82b9d56f9a92c63997800',
           'region' => 'content_row2',
           'weight' => '-8',
         ),
-        'ds_extras-stanford_article_5' => array(
-          'module' => 'ds_extras',
-          'delta' => 'stanford_article_5',
+        'views-a10afbfbd3cba66965fc3de73aade672' => array(
+          'module' => 'views',
+          'delta' => 'a10afbfbd3cba66965fc3de73aade672',
           'region' => 'content_row2',
           'weight' => '-7',
         ),

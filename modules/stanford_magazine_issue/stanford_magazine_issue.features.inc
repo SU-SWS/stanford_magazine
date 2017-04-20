@@ -23,6 +23,13 @@ function stanford_magazine_issue_ctools_plugin_api($module = NULL, $api = NULL) 
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function stanford_magazine_issue_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function stanford_magazine_issue_node_info() {

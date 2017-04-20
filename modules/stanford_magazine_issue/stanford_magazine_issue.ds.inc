@@ -18,22 +18,6 @@ function stanford_magazine_issue_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'field_s_mag_issue_featured',
-        1 => 'field_s_mag_issue_article_2',
-        2 => 'field_s_mag_issue_article_3',
-        3 => 'field_s_mag_issue_article_4',
-        4 => 'field_s_mag_issue_article_5',
-      ),
-    ),
-    'fields' => array(
-      'field_s_mag_issue_featured' => 'ds_content',
-      'field_s_mag_issue_article_2' => 'ds_content',
-      'field_s_mag_issue_article_3' => 'ds_content',
-      'field_s_mag_issue_article_4' => 'ds_content',
-      'field_s_mag_issue_article_5' => 'ds_content',
-    ),
     'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
@@ -44,6 +28,8 @@ function stanford_magazine_issue_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
+    'hide_page_title' => '1',
+    'page_option_title' => '',
   );
   $export['node|stanford_magazine_issue|default'] = $ds_layout;
 
