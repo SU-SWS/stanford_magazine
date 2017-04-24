@@ -45,9 +45,14 @@ This module provides views for Magazine Articles including taxonomy related view
 **[Stanford Magazine Issue](https://github.com/SU-SWS/stanford_magazine/stanford_mag_issue/)**
 This module provides the Magazine Issue content type. 
 This is a "container" content type for Magazine Articles.
-There are five articles per issue. 
-Using Display Suite view modes and Contextual View Modes, 
-you can select from multiple view modes for displaying each issue.
+- There are five articles per issue. These articles are entity referenced by the issue.
+
+***Layouts***
+Magazine issues have a variety of layouts. 
+- *field_s_mag_issue_layout* This field identifies the layout for an issue
+- *Magazine Issue Layout* This taxonomy defines all issue layouts. 
+
+
 
 ***URLs***
 - *magazine/issue/\<number\>* - Displays a single magazine issue.
