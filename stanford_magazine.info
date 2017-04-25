@@ -17,6 +17,7 @@ dependencies[] = paragraphs
 dependencies[] = pathauto
 dependencies[] = stanford_date_formats
 dependencies[] = stanford_date_timepicker
+dependencies[] = stanford_field_formatters
 dependencies[] = stanford_image
 dependencies[] = stanford_image_styles
 dependencies[] = stanford_paragraph_types
