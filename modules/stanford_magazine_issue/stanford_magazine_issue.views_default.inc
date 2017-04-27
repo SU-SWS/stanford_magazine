@@ -700,14 +700,6 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_dek']['label'] = '';
   $handler->display->display_options['fields']['field_s_mag_article_dek']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_dek']['element_label_colon'] = FALSE;
-  /* Field: Content: Byline */
-  $handler->display->display_options['fields']['field_s_mag_article_byline']['id'] = 'field_s_mag_article_byline';
-  $handler->display->display_options['fields']['field_s_mag_article_byline']['table'] = 'field_data_field_s_mag_article_byline';
-  $handler->display->display_options['fields']['field_s_mag_article_byline']['field'] = 'field_s_mag_article_byline';
-  $handler->display->display_options['fields']['field_s_mag_article_byline']['relationship'] = 'field_s_mag_issue_featured_target_id';
-  $handler->display->display_options['fields']['field_s_mag_article_byline']['label'] = '';
-  $handler->display->display_options['fields']['field_s_mag_article_byline']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_s_mag_article_byline']['element_label_colon'] = FALSE;
   /* Field: Content: Topics */
   $handler->display->display_options['fields']['field_s_mag_article_topics']['id'] = 'field_s_mag_article_topics';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['table'] = 'field_data_field_s_mag_article_topics';
@@ -731,7 +723,7 @@ function stanford_magazine_issue_views_default_views() {
   </div>
 </a>
 <div class ="mag-feat-container">
-  <div class="mag-feat-date">[field_s_mag_article_date_1]  | [field_s_mag_article_byline] </div>
+  <div class="mag-feat-date">[field_s_mag_article_date_1] </div>
   <a href="node/[nid]">
     <h2 class="mag-feat-title mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color]">[field_s_mag_article_headline]</h2>
   </a>
