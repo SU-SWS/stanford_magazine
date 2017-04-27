@@ -38,6 +38,7 @@ features[field_base][] = field_s_mag_article_image
 features[field_base][] = field_s_mag_article_sections
 features[field_base][] = field_s_mag_article_series
 features[field_base][] = field_s_mag_article_topics
+features[field_group][] = group_s_mag_article_dept|node|stanford_magazine_article|full
 features[field_instance][] = node-stanford_magazine_article-body
 features[field_instance][] = node-stanford_magazine_article-field_s_mag_article_byline
 features[field_instance][] = node-stanford_magazine_article-field_s_mag_article_date
