@@ -717,10 +717,11 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
-  /* Field: Global: Custom text */
+  /* Field: Global: View rewrite */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="node/[nid]">
   <div class="mag-feat-image-container">
@@ -750,6 +751,20 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['edit_node']['element_default_classes'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
+    'stanford_magazine_issue' => 'stanford_magazine_issue',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
