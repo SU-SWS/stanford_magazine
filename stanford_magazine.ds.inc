@@ -86,5 +86,26 @@ function stanford_magazine_ds_layout_settings_info() {
   );
   $export['node|stanford_magazine_article|full'] = $ds_layout;
 
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|stanford_magazine_article|taxonomy';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'stanford_magazine_article';
+  $ds_layout->view_mode = 'taxonomy';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|stanford_magazine_article|taxonomy'] = $ds_layout;
+
   return $export;
 }
