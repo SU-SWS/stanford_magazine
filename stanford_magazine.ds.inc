@@ -56,7 +56,8 @@ function stanford_magazine_ds_layout_settings_info() {
         4 => 'field_s_mag_article_byline',
         5 => 'body',
         6 => 'field_s_mag_article_sections',
-        7 => 'field_s_mag_article_dept',
+        7 => 'group_s_mag_article_dept',
+        8 => 'field_s_mag_article_dept',
       ),
     ),
     'fields' => array(
@@ -67,6 +68,7 @@ function stanford_magazine_ds_layout_settings_info() {
       'field_s_mag_article_byline' => 'ds_content',
       'body' => 'ds_content',
       'field_s_mag_article_sections' => 'ds_content',
+      'group_s_mag_article_dept' => 'ds_content',
       'field_s_mag_article_dept' => 'ds_content',
     ),
     'classes' => array(),
