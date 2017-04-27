@@ -43,13 +43,13 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_banner_accent_color']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_banner_accent_color']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_banner_accent_color']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Field: Content: Publishing Date */
   $handler->display->display_options['fields']['field_s_mag_article_date_1']['id'] = 'field_s_mag_article_date_1';
   $handler->display->display_options['fields']['field_s_mag_article_date_1']['table'] = 'field_data_field_s_mag_article_date';
@@ -167,14 +167,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_s_mag_issue_article_2_target_id';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['relationship'] = 'field_s_mag_issue_article_2_target_id';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Field: Content: Featured Image */
   $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
@@ -225,17 +225,18 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
-  /* Field: Global: Custom text */
+  /* Field: Global: View rewrite */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="node/[nid]">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">
   <div class="mag-article-image">[field_s_mag_article_image] </div>
 </a>
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
-  <a href="node/[nid]">
+  <a href="[path]">
     <h2 class="mag-article-title mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color] ">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
@@ -279,14 +280,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_s_mag_issue_article_3_target_id';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['relationship'] = 'field_s_mag_issue_article_3_target_id';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Field: Content: Featured Image */
   $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
@@ -337,17 +338,18 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
-  /* Field: Global: Custom text */
+  /* Field: Global: View rewrite */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="node/[nid]">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">
   <div class="mag-article-image">[field_s_mag_article_image] </div>
 </a>
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
-  <a href="node/[nid]">
+  <a href="[path]">
     <h2 class="mag-article-title mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color] ">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
@@ -391,14 +393,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_s_mag_issue_article_4_target_id';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['relationship'] = 'field_s_mag_issue_article_4_target_id';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Field: Content: Featured Image */
   $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
@@ -449,17 +451,18 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
-  /* Field: Global: Custom text */
+  /* Field: Global: View rewrite */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="node/[nid]">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">
   <div class="mag-article-image">[field_s_mag_article_image] </div>
 </a>
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
-  <a href="node/[nid]">
+  <a href="[path]">
     <h2 class="mag-article-title mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color] ">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
@@ -503,14 +506,14 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_s_mag_issue_article_5_target_id';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['relationship'] = 'field_s_mag_issue_article_5_target_id';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   /* Field: Content: Featured Image */
   $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
@@ -561,17 +564,18 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
-  /* Field: Global: Custom text */
+  /* Field: Global: View rewrite */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: View rewrite';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="node/[nid]">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">
   <div class="mag-article-image">[field_s_mag_article_image] </div>
 </a>
 <div class ="mag-article-container">
   <div class="mag-article-date">[field_s_mag_article_date_1] </div>
-  <a href="node/[nid]">
+  <a href="[path]">
     <h2 class="mag-article-title mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color] ">[field_s_mag_article_headline]</h2>
   </a>
   <div class="mag-article-tax">[field_s_mag_article_topics]</div>
@@ -634,14 +638,6 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_accent_color']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Content: Nid */
-  $handler->display->display_options['fields']['nid']['id'] = 'nid';
-  $handler->display->display_options['fields']['nid']['table'] = 'node';
-  $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  $handler->display->display_options['fields']['nid']['relationship'] = 'field_s_mag_issue_featured_target_id';
-  $handler->display->display_options['fields']['nid']['label'] = '';
-  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Field: Content: Featured Image */
   $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
