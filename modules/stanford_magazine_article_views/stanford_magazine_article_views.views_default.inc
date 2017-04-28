@@ -232,7 +232,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['settings'] = array(
-    'format_type' => 'stanford_short_month_day',
+    'format_type' => 'stanford_month_two_digit_date_year',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -407,7 +407,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['settings'] = array(
-    'format_type' => 'stanford_short_month_day',
+    'format_type' => 'stanford_month_two_digit_date_year',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -545,12 +545,14 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="most-recent-article-container">
   <div class="mag-article-img">[field_s_mag_article_image]</div>
-    <div class ="mag-topic-card-container">
+  <div class ="mag-topic-card-container">
+    <div class="mag-topic-card-content-container">
       <div class="mag-article-date">[field_s_mag_article_date]</div>
       <div class="mag-article-title mag-article-color-[field_s_mag_article_accent_color]">[title]</div>
       <div class="mag-article-topics">[field_s_mag_article_topics]</div>
-      <div class="mag-article-issue mag-issue-color-[field_s_mag_issue_accent_color] mag-issue-color-[field_s_mag_issue_accent_color_1] mag-issue-color-[field_s_mag_issue_accent_color_2] mag-issue-color-[field_s_mag_issue_accent_color_3] mag-issue-color-[field_s_mag_issue_accent_color_4]">[title_1] [title_2] [title_3] [title_4] [title_5]</div>
     </div>
+  <div class="mag-article-issue mag-issue-color-[field_s_mag_issue_accent_color] mag-issue-color-[field_s_mag_issue_accent_color_1] mag-issue-color-[field_s_mag_issue_accent_color_2] mag-issue-color-[field_s_mag_issue_accent_color_3] mag-issue-color-[field_s_mag_issue_accent_color_4]">[title_1] [title_2] [title_3] [title_4] [title_5]</div>
+  </div>
 </div>
 <div class="edit-link">[edit_node]</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
@@ -584,7 +586,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['settings'] = array(
-    'format_type' => 'stanford_short_month_day',
+    'format_type' => 'stanford_month_two_digit_date_year',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
