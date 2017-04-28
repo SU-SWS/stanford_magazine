@@ -487,7 +487,7 @@ function stanford_magazine_field_default_field_instances() {
     'bundle' => 'stanford_magazine_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This is the title for your news item. Please keep this title under 70 characters.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1028,6 +1028,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('These terms identify the series associated with this article. Select one or more series.');
   t('These terms identify the topics associated with this article. Select one or more topics.');
   t('This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.');
+  t('This is the title for your news item. Please keep this title under 70 characters.');
   t('This is your byline. It identifies the author(s) of the article. ');
   t('This is your dek. This displays a summary or teaser of your article. Please keep this under 180 characters.');
   t('Topics');
