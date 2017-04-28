@@ -232,7 +232,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['settings'] = array(
-    'format_type' => 'stanford_month_two_digit_date_year',
+    'format_type' => 'short',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -407,7 +407,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['settings'] = array(
-    'format_type' => 'stanford_month_two_digit_date_year',
+    'format_type' => 'short',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -586,7 +586,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_date']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_date']['settings'] = array(
-    'format_type' => 'stanford_month_two_digit_date_year',
+    'format_type' => 'short',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
