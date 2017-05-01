@@ -9,7 +9,6 @@ dependencies[] = context
 dependencies[] = ctools
 dependencies[] = stanford_magazine
 dependencies[] = views
-features[context][] = stanford_magazine_tax_views
 features[ctools][] = context:context:3
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
