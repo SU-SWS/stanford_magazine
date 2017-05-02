@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Magazine Article Administration feature.
+ */
+
+include_once 'stanford_magazine_article_administration.features.inc';
