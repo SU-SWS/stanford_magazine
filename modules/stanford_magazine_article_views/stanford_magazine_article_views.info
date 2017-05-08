@@ -12,5 +12,4 @@ features[ctools][] = context:context:3
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = stanford_magazine_topics
-project path = sites/default/modules/stanford/stanford_magazine/modules
 project status url = https://github.com/SU-SWS/stanford_magazine
