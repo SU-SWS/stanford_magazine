@@ -5,6 +5,7 @@ package = Stanford
 version = 7.x-1.0-alpha1
 project = stanford_magazine_article_views
 dependencies[] = bean
+dependencies[] = ctools
 dependencies[] = stanford_magazine
 dependencies[] = views
 dependencies[] = views_load_more

@@ -561,6 +561,8 @@ function stanford_magazine_article_views_views_default_views() {
   $handler = $view->new_display('block', 'Second Grouping of Articles Block', 'block_2');
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'views-grid-four article-grouping';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'load_more';
   $handler->display->display_options['pager']['options']['items_per_page'] = '8';
