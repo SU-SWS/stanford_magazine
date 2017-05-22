@@ -24,6 +24,7 @@ function stanford_magazine_issue_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'body',
+      1 => 'field_s_mag_issue_layout',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
