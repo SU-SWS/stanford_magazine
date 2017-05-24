@@ -591,8 +591,12 @@ function stanford_magazine_field_default_field_instances() {
 <ol>
 <li>Insert it into the <strong>Featured image/video insert</strong> field below</li>
 <li>Add caption and credits below the image as: <strong>Caption | Credits</strong></li>
+<li>Add caption style to the caption and credits as follows:</li>
+<ol>
+<li>Select all the text for the caption and credits</li>
+<li>Select <strong>Caption</strong> from the <strong>Styles</strong> dropdown in the WYSIWYG toolbar</li>
 </ol>
-',
+</ol>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -933,7 +937,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
     'bundle' => 'stanford_magazine_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'These terms identify the topics associated with this article. Select one or more topics.',
+    'description' => 'These terms identify the topics associated with this article. Select up to three topics.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1003,8 +1007,12 @@ Each of these pre-defined paragraph types supports a different type of content.'
 <ol>
 <li>Insert it into the <strong>Featured image/video insert</strong> field below</li>
 <li>Add caption and credits below the image as: <strong>Caption | Credits</strong></li>
+<li>Add caption style to the caption and credits as follows:</li>
+<ol>
+<li>Select all the text for the caption and credits</li>
+<li>Select <strong>Caption</strong> from the <strong>Styles</strong> dropdown in the WYSIWYG toolbar</li>
 </ol>
-');
+</ol>');
   t('<p>This text area displays the featured image or video. </p>
 
 <p>To display an <strong>image</strong>: use the <strong>Featured image</strong> field to upload and insert an image.
@@ -1026,7 +1034,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('These are the paragraphs for your article. 
 Each of these pre-defined paragraph types supports a different type of content.');
   t('These terms identify the series associated with this article. Select one or more series.');
-  t('These terms identify the topics associated with this article. Select one or more topics.');
+  t('These terms identify the topics associated with this article. Select up to three topics.');
   t('This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.');
   t('This is the title for your news item. Please keep this title under 70 characters.');
   t('This is your byline. It identifies the author(s) of the article. ');
