@@ -729,11 +729,13 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">
   <div class="mag-feat-image-container">
     <div>[field_s_mag_article_image]</div>
-    <h2 class="mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color]">Digital Magazine | [title]</h2>
-    <p>Scroll to <strong>Explore</strong></p>
+    <div class="mag-feat-content-container">
+      <h1 class="mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color]">Stanford Engineering Magazine | [title]</h1>
+      <p>Scroll to <strong>Explore</strong></p>
+    </div>
   </div>
 </a>
-<div class ="mag-feat-container">
+<div class ="mag-feat-details-container">
   <div class="mag-feat-date">[field_s_mag_article_date_1] </div>
   <a href="[path]">
     <h2 class="mag-feat-title mag-issue-color-[field_s_mag_issue_accent_color] mag-article-color-[field_s_mag_article_accent_color]">[field_s_mag_article_headline]</h2>
