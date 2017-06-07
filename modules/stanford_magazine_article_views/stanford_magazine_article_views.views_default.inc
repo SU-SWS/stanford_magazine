@@ -103,6 +103,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['label'] = '';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_limit'] = 'all';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_3']['id'] = 'title_3';
@@ -264,6 +265,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['label'] = '';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_limit'] = 'all';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_3']['id'] = 'title_3';
@@ -439,6 +441,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['label'] = '';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_limit'] = 'all';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_3']['id'] = 'title_3';
@@ -625,6 +628,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['label'] = '';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_limit'] = 'all';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_3']['id'] = 'title_3';
@@ -802,6 +806,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_topics']['label'] = '';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_s_mag_article_topics']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_limit'] = 'all';
   $handler->display->display_options['fields']['field_s_mag_article_topics']['delta_offset'] = '0';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title_3']['id'] = 'title_3';
