@@ -57,6 +57,8 @@ function stanford_magazine_ds_layout_settings_info() {
         5 => 'body',
         6 => 'field_s_mag_article_sections',
         7 => 'group_s_mag_article_dept',
+      ),
+      'related_departments' => array(
         8 => 'field_s_mag_article_dept',
       ),
     ),
@@ -69,7 +71,7 @@ function stanford_magazine_ds_layout_settings_info() {
       'body' => 'ds_content',
       'field_s_mag_article_sections' => 'ds_content',
       'group_s_mag_article_dept' => 'ds_content',
-      'field_s_mag_article_dept' => 'ds_content',
+      'field_s_mag_article_dept' => 'related_departments',
     ),
     'classes' => array(),
     'wrappers' => array(
