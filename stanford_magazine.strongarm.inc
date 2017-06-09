@@ -116,6 +116,9 @@ function stanford_magazine_strongarm() {
         'redirect' => array(
           'weight' => '11',
         ),
+        'xmlsitemap' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),

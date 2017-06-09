@@ -16,11 +16,10 @@ function stanford_magazine_field_default_field_instances() {
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '<p>This text area displays the featured image or video. </p>
-
 <p>To display an <strong>image</strong>: use the <strong>Featured image</strong> field to upload and insert an image.
 <p>To display a <strong>video</strong>:
 <ol>
-<li>Select the "Full HTML" Text format</li>
+<li>Select the <strong>Full HTML</strong> Text format</li>
 <li>Copy and paste the video embed code </li>
 </ol>
 </p>',
@@ -37,7 +36,7 @@ function stanford_magazine_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -136,7 +135,7 @@ function stanford_magazine_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -246,7 +245,7 @@ function stanford_magazine_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -338,7 +337,7 @@ function stanford_magazine_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -435,7 +434,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 17,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'above',
@@ -499,7 +498,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 15,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -584,9 +583,7 @@ function stanford_magazine_field_default_field_instances() {
     'bundle' => 'stanford_magazine_article',
     'deleted' => 0,
     'description' => '<p>This is your <strong>featured image</strong>. It will be used to identify this magazine article on pages such as a magazine issue page or any other views pages. When it displays it will be scaled and cropped to a ratio of 17:8. For best image fidelity—across all views except the featured Issue image (see below for specs)—upload this image size: 1700x800px. </p>
-
 <p>However, if this is to be the featured article in a <strong>Magazine Issue</strong>, upload an image size of 3200x1505px.</p>
-
 <p><em>If you also want this image to appear on your article detail page, or if you want to embed a video instead of an image you must:</em></p>
 <ol>
 <li>Insert it into the <strong>Featured image/video insert</strong> field below</li>
@@ -608,7 +605,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 19,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -660,7 +657,7 @@ function stanford_magazine_field_default_field_instances() {
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
-      'max_resolution' => '3200x3200',
+      'max_resolution' => '3400x3400',
       'min_resolution' => '',
       'title_field' => 0,
       'user_register_form' => FALSE,
@@ -807,7 +804,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -845,6 +842,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'p_callout' => -1,
         'p_cards' => -1,
         'p_hero' => -1,
+        'p_icon' => -1,
         'p_menu' => -1,
         'p_two_columns' => 'p_two_columns',
         'p_wysiwyg' => -1,
@@ -855,10 +853,11 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'p_callout' => 3,
         'p_cards' => 4,
         'p_hero' => 5,
+        'p_icon' => 13,
         'p_menu' => 6,
-        'p_two_columns' => 14,
+        'p_two_columns' => 15,
         'p_wysiwyg' => 7,
-        'p_wysiwyg_simple' => -16,
+        'p_wysiwyg_simple' => 17,
       ),
       'default_edit_mode' => 'open',
       'title' => 'Paragraph',
@@ -892,7 +891,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 18,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -941,7 +940,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
     'bundle' => 'stanford_magazine_article',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'These terms identify the topics associated with this article. Select up to three topics.',
+    'description' => 'These terms identify the topics associated with this article. Select up to three.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -952,10 +951,13 @@ Each of these pre-defined paragraph types supports a different type of content.'
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => TRUE,
+          'taxonomy_term_separator' => ', ',
+        ),
+        'type' => 'ds_taxonomy_separator',
+        'weight' => 0,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -1004,9 +1006,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   // Translatables
   // Included for use with string extractors like potx.
   t('<p>This is your <strong>featured image</strong>. It will be used to identify this magazine article on pages such as a magazine issue page or any other views pages. When it displays it will be scaled and cropped to a ratio of 17:8. For best image fidelity—across all views except the featured Issue image (see below for specs)—upload this image size: 1700x800px. </p>
-
 <p>However, if this is to be the featured article in a <strong>Magazine Issue</strong>, upload an image size of 3200x1505px.</p>
-
 <p><em>If you also want this image to appear on your article detail page, or if you want to embed a video instead of an image you must:</em></p>
 <ol>
 <li>Insert it into the <strong>Featured image/video insert</strong> field below</li>
@@ -1018,11 +1018,10 @@ Each of these pre-defined paragraph types supports a different type of content.'
 </ol>
 </ol>');
   t('<p>This text area displays the featured image or video. </p>
-
 <p>To display an <strong>image</strong>: use the <strong>Featured image</strong> field to upload and insert an image.
 <p>To display a <strong>video</strong>:
 <ol>
-<li>Select the "Full HTML" Text format</li>
+<li>Select the <strong>Full HTML</strong> Text format</li>
 <li>Copy and paste the video embed code </li>
 </ol>
 </p>');
@@ -1038,7 +1037,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('These are the paragraphs for your article. 
 Each of these pre-defined paragraph types supports a different type of content.');
   t('These terms identify the series associated with this article. Select one or more series.');
-  t('These terms identify the topics associated with this article. Select up to three topics.');
+  t('These terms identify the topics associated with this article. Select up to three.');
   t('This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.');
   t('This is the title for your news item. Please keep this title under 70 characters.');
   t('This is your byline. It identifies the author(s) of the article. ');
