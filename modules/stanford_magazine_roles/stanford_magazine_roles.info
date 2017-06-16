@@ -21,5 +21,4 @@ features[user_permission][] = edit own stanford_magazine_article content
 features[user_permission][] = edit terms in stanford_magazine_eyebrow
 features[user_permission][] = edit terms in stanford_magazine_series
 features[user_permission][] = edit terms in stanford_magazine_topics
-project path = sites/all/modules/stanford/stanford_magazine/modules/
 project status url = https://github.com/SU-SWS/stanford_magazine
