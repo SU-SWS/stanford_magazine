@@ -1,0 +1,14 @@
+name = Stanford Magazine Issue Views
+description = Views for an on-line "Digital" magazine issue
+core = 7.x
+package = Stanford
+version = 7.x-1.0-alpha1
+project = stanford_magazine_issue_views
+dependencies[] = ctools
+dependencies[] = stanford_magazine_issue
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = stanford_magazine_issue_recent
+project path = sites/default/modules/stanford/stanford_magazine/modules
+project status url = https://github.com/SU-SWS/stanford_magazine

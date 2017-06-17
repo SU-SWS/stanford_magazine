@@ -62,7 +62,6 @@ features[variable][] = pathauto_taxonomy_term_stanford_mag_issue_layout_pattern
 features[variable][] = xmlsitemap_settings_node_stanford_magazine_issue
 features[views_view][] = stanford_magazine_issue_article
 features[views_view][] = stanford_magazine_issue_featured_article
-features[views_view][] = stanford_magazine_issue_recent
 features_exclude[dependencies][stanford_soe_helper_sitewide] = stanford_soe_helper_sitewide
 features_exclude[field_base][field_s_mag_issue_accent_color] = field_s_mag_issue_accent_color
 features_exclude[field_base][body] = body

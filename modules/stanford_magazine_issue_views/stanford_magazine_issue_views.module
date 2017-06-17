@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Magazine Issue Views feature.
+ */
+
+include_once 'stanford_magazine_issue_views.features.inc';
