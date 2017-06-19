@@ -86,7 +86,9 @@ function stanford_magazine_issue_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">
   <div class="prev-mag-issue-wrapper prev-mag-issue-color">
-    <div class="prev-mag-issue-title"> [title] </div>
+    <div class="prev-mag-issue-title-wrapper">
+      <div class="prev-mag-issue-title"> [title] </div>
+    </div>
     <div class="prev-mag-issue-image"> [field_s_mag_article_image] </div>
   </div>
 </a>';
