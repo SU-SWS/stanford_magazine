@@ -22,7 +22,7 @@ function stanford_magazine_article_views_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['css_class'] = 'views-grid-four article-grouping';
+  $handler->display->display_options['css_class'] = 'views-grid-three article-grouping';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'time';
@@ -32,12 +32,9 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'load_more';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
-  $handler->display->display_options['pager']['options']['offset'] = '13';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Entity Reference: Referencing entity */
@@ -253,8 +250,15 @@ function stanford_magazine_article_views_views_default_views() {
     'stanford_magazine_article' => 'stanford_magazine_article',
   );
 
-  /* Display: Page 2-13 at /all */
-  $handler = $view->new_display('page', 'Page 2-13 at /all', 'page');
+  /* Display: Page 1-9 at /magazine */
+  $handler = $view->new_display('page', 'Page 1-9 at /magazine', 'page_1_9');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'views-grid-three article-grouping';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['path'] = 'magazine';
+
+  /* Display: Page 2-13 at /magazine/all */
+  $handler = $view->new_display('page', 'Page 2-13 at /magazine/all', 'page_2_13');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Latest News';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -265,14 +269,19 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['path'] = 'magazine/all';
 
-  /* Display: Block 1-9 */
-  $handler = $view->new_display('block', 'Block 1-9', 'block_1_9');
+  /* Display: Block 1 */
+  $handler = $view->new_display('block', 'Block 1', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'most-recent-article';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '9';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
 
   /* Display: Block 10-18+ */
   $handler = $view->new_display('block', 'Block 10-18+', 'block_10_18');
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'load_more';
   $handler->display->display_options['pager']['options']['items_per_page'] = '9';
@@ -288,15 +297,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['css_class'] = 'views-grid-four article-grouping';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
   $handler->display->display_options['use_ajax'] = TRUE;
-
-  /* Display: Block 1 */
-  $handler = $view->new_display('block', 'Block 1', 'block_1');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'most-recent-article';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
   $export['stanford_magazine_articles'] = $view;
 
   $view = new view();
