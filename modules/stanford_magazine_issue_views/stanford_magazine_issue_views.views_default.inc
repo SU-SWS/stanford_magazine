@@ -48,6 +48,16 @@ function stanford_magazine_issue_views_views_default_views() {
   $handler->display->display_options['relationships']['field_s_mag_issue_featured_target_id']['table'] = 'field_data_field_s_mag_issue_featured';
   $handler->display->display_options['relationships']['field_s_mag_issue_featured_target_id']['field'] = 'field_s_mag_issue_featured_target_id';
   $handler->display->display_options['relationships']['field_s_mag_issue_featured_target_id']['label'] = 'Featured Article';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Featured Image */
   $handler->display->display_options['fields']['field_s_mag_article_image']['id'] = 'field_s_mag_article_image';
   $handler->display->display_options['fields']['field_s_mag_article_image']['table'] = 'field_data_field_s_mag_article_image';
@@ -61,16 +71,6 @@ function stanford_magazine_issue_views_views_default_views() {
     'image_style' => '6-col-banner-short',
     'image_link' => '',
   );
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Path */
   $handler->display->display_options['fields']['path']['id'] = 'path';
   $handler->display->display_options['fields']['path']['table'] = 'node';
@@ -86,8 +86,10 @@ function stanford_magazine_issue_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[path]">
   <div class="prev-mag-issue-wrapper prev-mag-issue-color">
+    <div class="prev-mag-issue-title-wrapper">
+      <div class="prev-mag-issue-title"> [title] </div>
+    </div>
     <div class="prev-mag-issue-image"> [field_s_mag_article_image] </div>
-    <div class="prev-mag-issue-title"> [title] </div>
   </div>
 </a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
