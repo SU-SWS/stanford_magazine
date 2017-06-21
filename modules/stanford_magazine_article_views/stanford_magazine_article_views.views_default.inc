@@ -254,9 +254,19 @@ function stanford_magazine_article_views_views_default_views() {
 
   /* Display: Page 1-3 at /magazine */
   $handler = $view->new_display('page', 'Page 1-3 at /magazine', 'page_1_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Latest News';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
   $handler->display->display_options['css_class'] = 'views-grid-three article-grouping';
   $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<h2>What are we working on? What are we thinking about?</h2>';
+  $handler->display->display_options['header']['area']['format'] = 'content_editor_text_format';
   $handler->display->display_options['path'] = 'magazine';
 
   /* Display: Block 4-6 */
