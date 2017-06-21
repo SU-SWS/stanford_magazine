@@ -13,6 +13,7 @@ features[ctools][] = context:context:3
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[views_view][] = stanford_magazine_article_mag_landing_page
+features[views_view][] = stanford_magazine_article_most_recent
 features[views_view][] = stanford_magazine_articles
 features[views_view][] = stanford_magazine_topics
 project status url = https://github.com/SU-SWS/stanford_magazine
