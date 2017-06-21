@@ -528,13 +528,6 @@ function stanford_magazine_article_views_views_default_views() {
     'stanford_magazine_article' => 'stanford_magazine_article',
   );
 
-  /* Display: Page 1-9 at /magazine */
-  $handler = $view->new_display('page', 'Page 1-9 at /magazine', 'page_1_9');
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'views-grid-three article-grouping';
-  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
-  $handler->display->display_options['path'] = 'magazine';
-
   /* Display: Page 2-13 at /magazine/all */
   $handler = $view->new_display('page', 'Page 2-13 at /magazine/all', 'page_2_13');
   $handler->display->display_options['defaults']['title'] = FALSE;
