@@ -614,6 +614,7 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -791,6 +792,16 @@ function stanford_magazine_issue_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+
+  /* Display: Recent Block */
+  $handler = $view->new_display('block', 'Recent Block', 'block_recent');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Issue Number (field_s_mag_issue_number) */
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['id'] = 'field_s_mag_issue_number_value';
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['table'] = 'field_data_field_s_mag_issue_number';
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['field'] = 'field_s_mag_issue_number_value';
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $export['stanford_magazine_issue_featured_article'] = $view;
 
   return $export;
