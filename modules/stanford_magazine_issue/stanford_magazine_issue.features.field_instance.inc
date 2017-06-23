@@ -475,47 +475,6 @@ The featured image for this article will be the featured image for this issue. F
   );
 
   // Exported field_instance:
-  // 'node-stanford_magazine_issue-field_s_mag_issue_layout'.
-  $field_instances['node-stanford_magazine_issue-field_s_mag_issue_layout'] = array(
-    'bundle' => 'stanford_magazine_issue',
-    'default_value' => array(
-      0 => array(
-        'tid' => 3737,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'These terms identify the layout on views pages for this issue.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_s_mag_issue_layout',
-    'label' => 'Layout',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance:
   // 'node-stanford_magazine_issue-field_s_mag_issue_number'.
   $field_instances['node-stanford_magazine_issue-field_s_mag_issue_number'] = array(
     'bundle' => 'stanford_magazine_issue',
@@ -589,8 +548,6 @@ The featured image for this article will be the featured image for this issue. F
   t('Body');
   t('Featured Article');
   t('Issue Number');
-  t('Layout');
-  t('These terms identify the layout on views pages for this issue.');
   t('This is the featured article for this magazine issue. 
 <br>
 The featured image for this article will be the featured image for this issue. For best image fidelity, use an image size of 3200x1505px.');
