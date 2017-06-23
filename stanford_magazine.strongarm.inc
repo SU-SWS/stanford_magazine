@@ -105,19 +105,19 @@ function stanford_magazine_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '13',
+          'weight' => '16',
         ),
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '12',
+          'weight' => '15',
         ),
         'redirect' => array(
-          'weight' => '11',
+          'weight' => '14',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '17',
         ),
       ),
       'display' => array(),
@@ -152,7 +152,7 @@ function stanford_magazine_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_stanford_magazine_article';
-  $strongarm->value = '1';
+  $strongarm->value = 0;
   $export['node_preview_stanford_magazine_article'] = $strongarm;
 
   $strongarm = new stdClass();
