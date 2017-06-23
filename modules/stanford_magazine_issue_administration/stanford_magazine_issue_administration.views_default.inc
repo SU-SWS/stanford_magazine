@@ -28,7 +28,6 @@ function stanford_magazine_issue_administration_views_default_views() {
   $handler->display->display_options['access']['perm'] = 'administer nodes';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Filter';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
@@ -323,9 +322,11 @@ function stanford_magazine_issue_administration_views_default_views() {
   $handler->display->display_options['fields']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['fields']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['fields']['term_node_tid']['label'] = 'Terms';
+  $handler->display->display_options['fields']['term_node_tid']['link_to_taxonomy'] = FALSE;
   $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
     'stanford_affiliate_organization_type' => 0,
     'stanford_affiliation' => 0,
+    'stanford_cta_color' => 0,
     'capx_organizations' => 0,
     'stanford_department' => 0,
     'stanford_event_type' => 0,
@@ -346,6 +347,7 @@ function stanford_magazine_issue_administration_views_default_views() {
     'stanford_opp_time_of_year' => 0,
     'stanford_opp_type' => 0,
     'publication_type' => 0,
+    'stanford_related_content' => 0,
     'research_themes' => 0,
     'school_themes' => 0,
     'stanford_slide_category' => 0,
