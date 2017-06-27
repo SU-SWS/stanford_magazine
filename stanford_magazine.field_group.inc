@@ -122,7 +122,7 @@ function stanford_magazine_field_group_info() {
     'weight' => '24',
     'children' => array(
       0 => 'field_s_mag_article_print',
-      1 => 'service_links_displays_group',
+      1 => 'forward_ds_field',
     ),
     'format_type' => 'div',
     'format_settings' => array(

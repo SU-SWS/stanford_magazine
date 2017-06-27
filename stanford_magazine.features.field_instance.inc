@@ -434,7 +434,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 21,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'above',
@@ -498,7 +498,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 20,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -605,7 +605,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 24,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -804,7 +804,7 @@ function stanford_magazine_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'taxonomy' => array(
         'label' => 'above',
@@ -880,7 +880,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -967,7 +967,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 23,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
