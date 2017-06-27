@@ -27,6 +27,11 @@ function stanford_magazine_ds_field_settings_info() {
         'class' => '',
       ),
     ),
+    'forward_ds_field' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
   );
   $export['node|stanford_magazine_article|full'] = $ds_fieldsetting;
 
@@ -50,13 +55,17 @@ function stanford_magazine_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_s_mag_article_topics',
-        1 => 'title',
-        2 => 'field_s_mag_article_dek',
-        3 => 'group_s_mag_article_date_byline',
-        4 => 'body',
-        5 => 'field_s_mag_article_date',
-        6 => 'field_s_mag_article_sections',
-        7 => 'field_s_mag_article_byline',
+        1 => 'forward_ds_field',
+        2 => 'title',
+        3 => 'field_s_mag_article_print',
+        4 => 'field_s_mag_article_dek',
+        5 => 'group_s_mag_article_date_byline',
+        6 => 'body',
+        7 => 'field_s_mag_article_sections',
+        9 => 'group_s_date_and_byline',
+        10 => 'field_s_mag_article_date',
+        11 => 'group_s_social_and_print',
+        12 => 'field_s_mag_article_byline',
       ),
       'related_departments' => array(
         8 => 'field_s_mag_article_dept',
@@ -64,14 +73,18 @@ function stanford_magazine_ds_layout_settings_info() {
     ),
     'fields' => array(
       'field_s_mag_article_topics' => 'ds_content',
+      'forward_ds_field' => 'ds_content',
       'title' => 'ds_content',
+      'field_s_mag_article_print' => 'ds_content',
       'field_s_mag_article_dek' => 'ds_content',
       'group_s_mag_article_date_byline' => 'ds_content',
       'body' => 'ds_content',
-      'field_s_mag_article_date' => 'ds_content',
       'field_s_mag_article_sections' => 'ds_content',
-      'field_s_mag_article_byline' => 'ds_content',
       'field_s_mag_article_dept' => 'related_departments',
+      'group_s_date_and_byline' => 'ds_content',
+      'field_s_mag_article_date' => 'ds_content',
+      'group_s_social_and_print' => 'ds_content',
+      'field_s_mag_article_byline' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

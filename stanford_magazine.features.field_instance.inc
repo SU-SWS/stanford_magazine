@@ -135,7 +135,7 @@ function stanford_magazine_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 24,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -245,7 +245,7 @@ function stanford_magazine_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 23,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -434,7 +434,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 21,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'above',
@@ -476,7 +476,7 @@ function stanford_magazine_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 10,
+      'weight' => 12,
     ),
   );
 
@@ -498,7 +498,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 20,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -605,7 +605,7 @@ function stanford_magazine_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 24,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -780,6 +780,82 @@ function stanford_magazine_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-stanford_magazine_article-field_s_mag_article_print'.
+  $field_instances['node-stanford_magazine_article-field_s_mag_article_print'] = array(
+    'bundle' => 'stanford_magazine_article',
+    'default_value' => array(
+      0 => array(
+        'title' => 'Print',
+        'url' => '/print/[current-page:url:path]',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 2,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_mag_article_print',
+    'label' => 'Print',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 0,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-stanford_magazine_article-field_s_mag_article_sections'.
   $field_instances['node-stanford_magazine_article-field_s_mag_article_sections'] = array(
     'bundle' => 'stanford_magazine_article',
@@ -891,7 +967,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 23,
       ),
       'stanford_featured_mag_article' => array(
         'label' => 'hidden',
@@ -930,7 +1006,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 9,
+      'weight' => 11,
     ),
   );
 
@@ -999,7 +1075,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -1031,6 +1107,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('Featured Image');
   t('Featured image/video insert');
   t('Headline');
+  t('Print');
   t('Publishing Date');
   t('Sections');
   t('Series');

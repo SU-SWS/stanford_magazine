@@ -126,6 +126,20 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['element_label_type'] = 'div';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['element_wrapper_type'] = 'div';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
+    'stanford_magazine_issue' => 'stanford_magazine_issue',
+  );
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -262,6 +276,10 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['relationships']['field_s_mag_issue_article_3_target_id']['table'] = 'field_data_field_s_mag_issue_article_3';
   $handler->display->display_options['relationships']['field_s_mag_issue_article_3_target_id']['field'] = 'field_s_mag_issue_article_3_target_id';
   $handler->display->display_options['relationships']['field_s_mag_issue_article_3_target_id']['label'] = '3rd Article';
+  /* Relationship: Content revision: Content */
+  $handler->display->display_options['relationships']['nid']['id'] = 'nid';
+  $handler->display->display_options['relationships']['nid']['table'] = 'node_revision';
+  $handler->display->display_options['relationships']['nid']['field'] = 'nid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Accent color */
   $handler->display->display_options['fields']['field_s_mag_issue_accent_color']['id'] = 'field_s_mag_issue_accent_color';
@@ -614,6 +632,7 @@ function stanford_magazine_issue_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -791,6 +810,16 @@ function stanford_magazine_issue_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+
+  /* Display: Recent Block */
+  $handler = $view->new_display('block', 'Recent Block', 'block_recent');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Issue Number (field_s_mag_issue_number) */
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['id'] = 'field_s_mag_issue_number_value';
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['table'] = 'field_data_field_s_mag_issue_number';
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['field'] = 'field_s_mag_issue_number_value';
+  $handler->display->display_options['sorts']['field_s_mag_issue_number_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $export['stanford_magazine_issue_featured_article'] = $view;
 
   return $export;
