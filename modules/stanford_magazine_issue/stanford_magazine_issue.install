@@ -31,9 +31,9 @@ function stanford_magazine_issue_disable() {
 function stanford_magazine_issue_uninstall() {
 }
 /**
- * Remove field_s_cta_color if it exists
+ * Remove field_s_mag_issue_layout if it exists
  */
-function stanford_magazine_issue_7101() {
+function stanford_magazine_issue_update_7101() {
   $field = 'field_s_mag_issue_layout';
   if (field_info_field($field)) {
     field_delete_field($field);
