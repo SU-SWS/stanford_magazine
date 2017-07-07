@@ -1,0 +1,41 @@
+<?php
+/**
+ * @file
+ * stanford_magazine_issue.install
+ *
+ * Install, enable, uninstall, and disable functions
+ */
+
+/**
+ * Implements hook_install().
+ */
+function stanford_magazine_issue_install() {
+
+}
+
+/**
+ * Implements hook_enable().
+ */
+function stanford_magazine_issue_enable() {
+}
+
+/**
+ * Implements hook_disable().
+ */
+function stanford_magazine_issue_disable() {
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function stanford_magazine_issue_uninstall() {
+}
+/**
+ * Remove field_s_mag_issue_layout if it exists
+ */
+function stanford_magazine_issue_update_7101() {
+  $field = 'field_s_mag_issue_layout';
+  if (field_info_field($field)) {
+    field_delete_field($field);
+  }
+}

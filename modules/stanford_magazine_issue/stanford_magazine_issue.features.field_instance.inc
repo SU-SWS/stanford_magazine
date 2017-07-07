@@ -480,7 +480,7 @@ The featured image for this article will be the featured image for this issue. F
     'bundle' => 'stanford_magazine_issue',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'This is the issue number. Enter <em>just</em> the number for the issue, e.g. 5, 7, 18, 35, etc.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -553,6 +553,7 @@ The featured image for this article will be the featured image for this issue. F
 The featured image for this article will be the featured image for this issue. For best image fidelity, use an image size of 3200x1505px.');
   t('This is the fifth article in this magazine issue.');
   t('This is the fourth article in this magazine issue.');
+  t('This is the issue number. Enter <em>just</em> the number for the issue, e.g. 5, 7, 18, 35, etc.');
   t('This is the second article in this magazine issue.');
   t('This is the third article in this magazine issue.');
 
