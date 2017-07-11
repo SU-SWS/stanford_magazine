@@ -1,6 +1,6 @@
-Stanford Module
+Stanford Magazine
 
-Version 7.x-1.0                                                       YYYY-MM-DD
+Version 7.x-1.0-alpha1                                                    2017-07-11
 --------------------------------------------------------------------------------
 
 - Initial Release
