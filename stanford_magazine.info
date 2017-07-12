@@ -13,7 +13,6 @@ dependencies[] = ds
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = forward
-dependencies[] = forward_services
 dependencies[] = image
 dependencies[] = link
 dependencies[] = options
