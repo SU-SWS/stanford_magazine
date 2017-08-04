@@ -520,11 +520,6 @@ function stanford_magazine_article_views_views_default_views() {
 <div class="edit-link">[edit_node]</div>
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Sort criterion: Content: Publishing Date (field_s_mag_article_date) */
   $handler->display->display_options['sorts']['field_s_mag_article_date_value']['id'] = 'field_s_mag_article_date_value';
   $handler->display->display_options['sorts']['field_s_mag_article_date_value']['table'] = 'field_data_field_s_mag_article_date';
@@ -553,6 +548,20 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+
+  /* Display: Block Featured */
+  $handler = $view->new_display('block', 'Block Featured', 'block_featured');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Featured (field_s_mag_article_featured) */
+  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['id'] = 'field_s_mag_article_featured_value';
+  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['table'] = 'field_data_field_s_mag_article_featured';
+  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['field'] = 'field_s_mag_article_featured_value';
+  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Publishing Date (field_s_mag_article_date) */
+  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['id'] = 'field_s_mag_article_date_value';
+  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['table'] = 'field_data_field_s_mag_article_date';
+  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['field'] = 'field_s_mag_article_date_value';
+  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['order'] = 'DESC';
   $export['stanford_magazine_article_most_recent'] = $view;
 
   $view = new view();
