@@ -481,6 +481,60 @@ function stanford_magazine_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-stanford_magazine_article-field_s_mag_article_featured'.
+  $field_instances['node-stanford_magazine_article-field_s_mag_article_featured'] = array(
+    'bundle' => 'stanford_magazine_article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'This indicates if this article will be featured on the homepage or other places. If setting this to "Featured" please verify that no other magazine articles are also set to "Featured".',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'taxonomy' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_s_mag_article_featured',
+    'label' => 'Featured',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-stanford_magazine_article-field_s_mag_article_headline'.
   $field_instances['node-stanford_magazine_article-field_s_mag_article_headline'] = array(
     'bundle' => 'stanford_magazine_article',
@@ -1104,6 +1158,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('Byline');
   t('Dek');
   t('Eyebrow');
+  t('Featured');
   t('Featured Image');
   t('Featured image/video insert');
   t('Headline');
@@ -1116,6 +1171,7 @@ Each of these pre-defined paragraph types supports a different type of content.'
   t('These terms identify the series associated with this article. Select one or more series.');
   t('These terms identify the topics associated with this article. Select up to three.');
   t('This auto-tagging taxonomy identifies one eyebrow term associated with this article. You may create a new term. Begin typing to see existing terms.');
+  t('This indicates if this article will be featured on the homepage or other places. If setting this to "Featured" please verify that no other magazine articles are also set to "Featured".');
   t('This is the title for your news item. Please keep this title under 70 characters.');
   t('This is your byline. It identifies the author(s) of the article. ');
   t('This is your dek. This displays a summary or teaser of your article. Please keep this under 180 characters.');
