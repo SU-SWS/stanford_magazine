@@ -551,17 +551,29 @@ function stanford_magazine_article_views_views_default_views() {
 
   /* Display: Block Featured */
   $handler = $view->new_display('block', 'Block Featured', 'block_featured');
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Featured (field_s_mag_article_featured) */
-  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['id'] = 'field_s_mag_article_featured_value';
-  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['table'] = 'field_data_field_s_mag_article_featured';
-  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['field'] = 'field_s_mag_article_featured_value';
-  $handler->display->display_options['sorts']['field_s_mag_article_featured_value']['order'] = 'DESC';
-  /* Sort criterion: Content: Publishing Date (field_s_mag_article_date) */
-  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['id'] = 'field_s_mag_article_date_value';
-  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['table'] = 'field_data_field_s_mag_article_date';
-  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['field'] = 'field_s_mag_article_date_value';
-  $handler->display->display_options['sorts']['field_s_mag_article_date_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'stanford_magazine_article' => 'stanford_magazine_article',
+  );
+  /* Filter criterion: Content: Featured (field_s_mag_article_featured) */
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['id'] = 'field_s_mag_article_featured_value';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['table'] = 'field_data_field_s_mag_article_featured';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['field'] = 'field_s_mag_article_featured_value';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['value'] = array(
+    1 => '1',
+  );
   $export['stanford_magazine_article_most_recent'] = $view;
 
   $view = new view();
