@@ -254,6 +254,10 @@ function stanford_magazine_article_administration_views_default_views() {
     'stanford_student_type' => 0,
     'tags' => 0,
   );
+  /* Field: Content: Featured */
+  $handler->display->display_options['fields']['field_s_mag_article_featured']['id'] = 'field_s_mag_article_featured';
+  $handler->display->display_options['fields']['field_s_mag_article_featured']['table'] = 'field_data_field_s_mag_article_featured';
+  $handler->display->display_options['fields']['field_s_mag_article_featured']['field'] = 'field_s_mag_article_featured';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
