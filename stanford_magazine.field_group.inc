@@ -98,7 +98,7 @@ function stanford_magazine_field_group_info() {
         'id' => '',
         'classes' => 'group-s-mag-article-dept field-group-div ',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h2',
         'effect' => 'none',
         'speed' => 'fast',
