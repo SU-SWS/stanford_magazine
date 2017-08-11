@@ -72,7 +72,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_mag_article_image']['settings'] = array(
-    'image_style' => '6-col-banner-short',
+    'image_style' => 'header_370_x_170',
     'image_link' => 'content',
   );
   /* Field: Content: Publishing Date */
@@ -221,7 +221,7 @@ function stanford_magazine_article_views_views_default_views() {
   <div class="mag-article-img">[field_s_mag_article_image]</div>
     <div class="mag-article-content-container">
       <div class="mag-article-date">[field_s_mag_article_date]</div>
-      <div class="mag-article-title">[title]</div>
+      <div class="mag-article-title"><h2>[title]</h2></div>
       <div class="mag-article-topics">[field_s_mag_article_topics]</div>
     </div>
 </div>
@@ -337,7 +337,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_mag_article_image']['settings'] = array(
-    'image_style' => '6-col-banner-short',
+    'image_style' => 'header_370_x_170',
     'image_link' => 'content',
   );
   /* Field: Content: Publishing Date */
