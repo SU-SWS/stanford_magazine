@@ -337,7 +337,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['field_s_mag_article_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_s_mag_article_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_s_mag_article_image']['settings'] = array(
-    'image_style' => 'header_370_x_170',
+    'image_style' => '6-col-banner-short',
     'image_link' => 'content',
   );
   /* Field: Content: Publishing Date */
