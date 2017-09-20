@@ -16,4 +16,5 @@ features[views_view][] = stanford_magazine_article_mag_landing_page
 features[views_view][] = stanford_magazine_article_most_recent
 features[views_view][] = stanford_magazine_articles
 features[views_view][] = stanford_magazine_topics
+features[views_view][] = stanford_magazine_article_featured
 project status url = https://github.com/SU-SWS/stanford_magazine
