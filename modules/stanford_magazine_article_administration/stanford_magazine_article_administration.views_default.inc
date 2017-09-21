@@ -162,6 +162,7 @@ function stanford_magazine_article_administration_views_default_views() {
           'stanford_magazine_article::field_s_mag_article_series' => 'stanford_magazine_article::field_s_mag_article_series',
           'stanford_magazine_article::field_s_mag_article_topics' => 'stanford_magazine_article::field_s_mag_article_topics',
           'stanford_magazine_article::field_s_mag_article_accent_color' => 'stanford_magazine_article::field_s_mag_article_accent_color',
+          'stanford_magazine_article::field_s_mag_article_featured' => 'stanford_magazine_article::field_s_mag_article_featured',
         ),
       ),
     ),
@@ -322,6 +323,27 @@ function stanford_magazine_article_administration_views_default_views() {
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Published';
   $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
   $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  /* Filter criterion: Content: Featured (field_s_mag_article_featured) */
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['id'] = 'field_s_mag_article_featured_value';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['table'] = 'field_data_field_s_mag_article_featured';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['field'] = 'field_s_mag_article_featured_value';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['expose']['operator_id'] = 'field_s_mag_article_featured_value_op';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['expose']['label'] = 'Featured';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['expose']['operator'] = 'field_s_mag_article_featured_value_op';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['expose']['identifier'] = 'field_s_mag_article_featured_value';
+  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    12 => 0,
+    10 => 0,
+    8 => 0,
+    6 => 0,
+    20 => 0,
+    14 => 0,
+    16 => 0,
+    18 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
