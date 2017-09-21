@@ -223,9 +223,10 @@ function stanford_magazine_article_views_views_default_views() {
       <div class="mag-article-date">[field_s_mag_article_date]</div>
       <div class="mag-article-title"><h2>[title]</h2></div>
       <div class="mag-article-topics">[field_s_mag_article_topics]</div>
+      <div class="edit-link">[edit_node]</div>
     </div>
 </div>
-<div class="edit-link">[edit_node]</div>
+
 ';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Publishing Date (field_s_mag_article_date) */
@@ -250,6 +251,14 @@ function stanford_magazine_article_views_views_default_views() {
 
   /* Display: Block Featured */
   $handler = $view->new_display('block', 'Block Featured', 'block_featured');
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: View area */
+  $handler->display->display_options['empty']['view']['id'] = 'view';
+  $handler->display->display_options['empty']['view']['table'] = 'views';
+  $handler->display->display_options['empty']['view']['field'] = 'view';
+  $handler->display->display_options['empty']['view']['empty'] = TRUE;
+  $handler->display->display_options['empty']['view']['view_to_insert'] = 'stanford_magazine_article_featured:block_recent';
+  $handler->display->display_options['empty']['view']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -273,6 +282,9 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['filters']['field_s_mag_article_featured_value']['value'] = array(
     1 => '1',
   );
+
+  /* Display: Block Most Recent */
+  $handler = $view->new_display('block', 'Block Most Recent', 'block_recent');
   $export['stanford_magazine_article_featured'] = $view;
 
   $view = new view();
@@ -1046,6 +1058,15 @@ function stanford_magazine_article_views_views_default_views() {
     'stanford_magazine_article' => 'stanford_magazine_article',
   );
 
+  /* Display: Block 1 */
+  $handler = $view->new_display('block', 'Block 1', 'block_1');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'most-recent-article';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+
   /* Display: Page 2-13 at /magazine/all */
   $handler = $view->new_display('page', 'Page 2-13 at /magazine/all', 'page_2_13');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -1058,14 +1079,17 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '1';
   $handler->display->display_options['path'] = 'magazine/all';
 
-  /* Display: Block 1 */
-  $handler = $view->new_display('block', 'Block 1', 'block_1');
+  /* Display: Page 2-13 at /magazine/latest-news */
+  $handler = $view->new_display('page', 'Page 2-13 at /magazine/latest-news', 'page_latest_news');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Latest News';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'most-recent-article';
+  $handler->display->display_options['css_class'] = 'views-grid-four article-grouping';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
+  $handler->display->display_options['pager']['options']['offset'] = '1';
+  $handler->display->display_options['path'] = 'magazine/latest-news';
 
   /* Display: Block 10-18+ */
   $handler = $view->new_display('block', 'Block 10-18+', 'block_10_18');
@@ -1095,18 +1119,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['pager']['options']['more_button_text'] = 'Load More';
   $handler->display->display_options['pager']['options']['effects']['type'] = 'fade';
   $handler->display->display_options['pager']['options']['effects']['speed'] = 'slow';
-
-  /* Display: Page 2-13 at /magazine/latest-news */
-  $handler = $view->new_display('page', 'Page 2-13 at /magazine/latest-news', 'page_latest_news');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Latest News';
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'views-grid-four article-grouping';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '12';
-  $handler->display->display_options['pager']['options']['offset'] = '1';
-  $handler->display->display_options['path'] = 'magazine/latest-news';
   $export['stanford_magazine_articles'] = $view;
 
   $view = new view();
