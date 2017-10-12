@@ -15,6 +15,7 @@ dependencies[] = field_group
 dependencies[] = forward
 dependencies[] = image
 dependencies[] = link
+dependencies[] = list
 dependencies[] = options
 dependencies[] = paragraphs
 dependencies[] = pathauto
