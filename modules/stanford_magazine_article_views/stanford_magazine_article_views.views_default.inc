@@ -220,7 +220,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="mag-article-container">
   <div class="mag-article-img">[field_s_mag_article_image]</div>
     <div class="mag-article-content-container">
-      <div class="mag-article-date">[field_s_mag_article_date]</div>
+      <div class="mag-article-date">Research & Ideas - [field_s_mag_article_date]</div>
       <div class="mag-article-title"><h2>[title]</h2></div>
       <div class="mag-article-topics">[field_s_mag_article_topics]</div>
       <div class="edit-link">[edit_node]</div>
