@@ -1,6 +1,15 @@
 Stanford Magazine
 
-Version 7.x-1.0-alpha1                                                    2017-07-11
---------------------------------------------------------------------------------
+Version 7.x-1.0-beta1                                                2017-10-24
+-------------------------------------------------------------------------------
+- Fix bug with soundcloud embed by allowing editors to add an “iframe-auto” class.  This class helps accurately scale the embed.
+- Add “Research & Ideas” label to cards on the site homepage.
+- Shrinks masthead for Digital Magazine section.
+- Updates sort criteria for stories below the email signup form.
+- Improve printed page styles.
+
+
+Version 7.x-1.0-alpha1                                               2017-07-11
+-------------------------------------------------------------------------------
 
 - Initial Release
