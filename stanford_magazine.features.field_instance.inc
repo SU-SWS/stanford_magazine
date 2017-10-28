@@ -1150,10 +1150,11 @@ Each of these pre-defined paragraph types supports a different type of content.'
 </ol>');
   t('<p>This text area displays the featured image or video. </p>
 <p>To display an <strong>image</strong>: use the <strong>Featured image</strong> field to upload and insert an image.
-<p>To display a <strong>video</strong>:
+<p>To display a <strong>video</strong> or <strong>audio</strong> iFrame:
 <ol>
 <li>Select the <strong>Full HTML</strong> Text format</li>
-<li>Copy and paste the video embed code </li>
+<li>Copy and paste the embed code </li>
+<li>To override the fixed height add <em>class="iframe-auto"</em> after the iframe tag</li>
 </ol>
 </p>');
   t('Byline');
