@@ -26,7 +26,7 @@ function stanford_magazine_settings() {
 function stanford_magazine_article_set_image() {
 
   // Get the image
-  $filename = "stanford_magazine_article_image.png";
+  $filename = "stanford_magazine_article_image.jpg";
   $file_path = drupal_get_path('module', 'stanford_magazine') . "/images/" . $filename ;
   $image = file_get_contents($file_path);
 
