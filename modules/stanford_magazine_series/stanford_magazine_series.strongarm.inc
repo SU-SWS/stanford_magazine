@@ -61,7 +61,6 @@ function stanford_magazine_series_strongarm() {
   $strongarm->name = 'node_options_stanford_magazine_series';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_stanford_magazine_series'] = $strongarm;
 
@@ -76,18 +75,8 @@ function stanford_magazine_series_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_stanford_magazine_series';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_stanford_magazine_series'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'xmlsitemap_settings_node_stanford_magazine_series';
-  $strongarm->value = array(
-    'status' => '0',
-    'priority' => '0.5',
-  );
-  $export['xmlsitemap_settings_node_stanford_magazine_series'] = $strongarm;
 
   return $export;
 }
