@@ -29,17 +29,11 @@ function stanford_magazine_series_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-0542b860e9342e091050351aecc5f26f' => array(
+        'views-27cc0f9e49acab80f2a5eebb4b19cbc5' => array(
           'module' => 'views',
-          'delta' => '0542b860e9342e091050351aecc5f26f',
+          'delta' => '27cc0f9e49acab80f2a5eebb4b19cbc5',
           'region' => 'content_lower',
-          'weight' => '-10',
-        ),
-        'views-912455664e3d519fccc97d734b33ee3c' => array(
-          'module' => 'views',
-          'delta' => '912455664e3d519fccc97d734b33ee3c',
-          'region' => 'content_lower',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),
