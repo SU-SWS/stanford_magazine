@@ -1,5 +1,5 @@
-menu-item {
+.view-stanford-mag-series-article-list .menu-item {
   position: -webkit-sticky;
   position: sticky;
-  top: -1px;
+  top: 30px;
 }
