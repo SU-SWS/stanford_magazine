@@ -93,24 +93,33 @@ function stanford_magazine_series_views_default_views() {
   $handler->display->display_options['fields']['expression']['precision'] = '0';
   $handler->display->display_options['fields']['expression']['separator'] = '';
   $handler->display->display_options['fields']['expression']['expression'] = '[counter] + 1';
-  /* Field: Global: Raw anchor link for series+articleNumber display */
+  /* Field: Global: Raw anchor for series+articleNumber display */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: Raw anchor link for series+articleNumber display';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Global: Raw anchor for series+articleNumber display';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['text'] = 'series[nid]article[counter]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Global: Raw anchor link for next article in series */
+  /* Field: Global: Raw anchor for next article in series */
   $handler->display->display_options['fields']['nothing_1']['id'] = 'nothing_1';
   $handler->display->display_options['fields']['nothing_1']['table'] = 'views';
   $handler->display->display_options['fields']['nothing_1']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Global: Raw anchor link for next article in series';
+  $handler->display->display_options['fields']['nothing_1']['ui_name'] = 'Global: Raw anchor for next article in series';
   $handler->display->display_options['fields']['nothing_1']['label'] = '';
   $handler->display->display_options['fields']['nothing_1']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing_1']['alter']['text'] = 'series[nid]article[expression]';
   $handler->display->display_options['fields']['nothing_1']['element_label_colon'] = FALSE;
+  /* Field: Global: Raw anchor for article */
+  $handler->display->display_options['fields']['nothing_4']['id'] = 'nothing_4';
+  $handler->display->display_options['fields']['nothing_4']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing_4']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing_4']['ui_name'] = 'Global: Raw anchor for article';
+  $handler->display->display_options['fields']['nothing_4']['label'] = '';
+  $handler->display->display_options['fields']['nothing_4']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nothing_4']['alter']['text'] = 'article[nid_1]';
+  $handler->display->display_options['fields']['nothing_4']['element_label_colon'] = FALSE;
   /* Field: Global: Menu */
   $handler->display->display_options['fields']['nothing_2']['id'] = 'nothing_2';
   $handler->display->display_options['fields']['nothing_2']['table'] = 'views';
@@ -153,14 +162,12 @@ function stanford_magazine_series_views_default_views() {
   $handler->display->display_options['fields']['nothing_3']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing_3']['ui_name'] = 'Global: View rewrite';
   $handler->display->display_options['fields']['nothing_3']['label'] = '';
-  $handler->display->display_options['fields']['nothing_3']['alter']['text'] = '<div class="parent-[counter]" data-sticky_parent>
+  $handler->display->display_options['fields']['nothing_3']['alter']['text'] = '<div id="[nothing_4]" class="article">
 
-  <div class="child-[counter]" data-sticky_child>
     [nothing_2]
     [field_s_mag_article_byline]
     [field_s_mag_article_dek] 
     [field_s_mag_article_topics]
-  </div>
 </div>';
   $handler->display->display_options['fields']['nothing_3']['element_label_colon'] = FALSE;
   /* Contextual filter: Content: Nid */
