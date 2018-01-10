@@ -128,8 +128,8 @@ function stanford_magazine_series_views_default_views() {
   $handler->display->display_options['fields']['nothing_2']['label'] = '';
   $handler->display->display_options['fields']['nothing_2']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nothing_2']['alter']['text'] = '<hr>
-<div id="[nothing]" class="menu-item">Part [counter] of [view] | [title_1] | <a href="#[nothing_1]">Jump to next </a></div>
-<hr>';
+<div id="[nothing]" class="menu-item">Part [counter] of [view] | [title_1] | <div class="scroll-next"><a href="#[nothing_1]">Jump to next </a></div></div>
+  <hr>';
   $handler->display->display_options['fields']['nothing_2']['element_label_colon'] = FALSE;
   /* Field: Content: Byline */
   $handler->display->display_options['fields']['field_s_mag_article_byline']['id'] = 'field_s_mag_article_byline';

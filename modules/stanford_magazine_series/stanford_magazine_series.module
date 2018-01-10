@@ -25,3 +25,18 @@ function stanford_magazine_series_preprocess_page(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view().
+ *
+ * This adds the stanford_series_anchor_scroll.js when we're looking
+ * at the series view.
+ */
+function stanford_magazine_series_preprocess_views_view(&$vars) {
+  $view = $vars['view'];
+  if ($view->name == 'stanford_mag_series_article_list') {
+    $file_path = drupal_get_path('module', 'stanford_magazine_series')
+      . "/js/stanford_series_anchor_scroll.js";
+    drupal_add_js($file_path);
+  }
+}
