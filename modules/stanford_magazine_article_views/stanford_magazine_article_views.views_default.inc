@@ -38,6 +38,13 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* No results behavior: Global: View area */
+  $handler->display->display_options['empty']['view']['id'] = 'view';
+  $handler->display->display_options['empty']['view']['table'] = 'views';
+  $handler->display->display_options['empty']['view']['field'] = 'view';
+  $handler->display->display_options['empty']['view']['empty'] = TRUE;
+  $handler->display->display_options['empty']['view']['view_to_insert'] = 'stanford_magazine_article_featured:block_recent';
+  $handler->display->display_options['empty']['view']['inherit_arguments'] = TRUE;
   /* Relationship: Entity Reference: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_s_mag_issue_article_3_node']['id'] = 'reverse_field_s_mag_issue_article_3_node';
   $handler->display->display_options['relationships']['reverse_field_s_mag_issue_article_3_node']['table'] = 'node';
@@ -285,6 +292,14 @@ function stanford_magazine_article_views_views_default_views() {
 
   /* Display: Block Most Recent */
   $handler = $view->new_display('block', 'Block Most Recent', 'block_recent');
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No articles to display';
+  $handler->display->display_options['empty']['area']['format'] = 'content_editor_text_format';
 
   /* Display: Block Dept Featured */
   $handler = $view->new_display('block', 'Block Dept Featured', 'block_dept_featured');
