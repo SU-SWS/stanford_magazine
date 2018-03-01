@@ -301,7 +301,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['tid']['default_argument_options']['anyall'] = '+';
@@ -317,7 +317,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'stanford_department' => 'stanford_department',
   );
-  $handler->display->display_options['arguments']['tid']['validate_options']['type'] = 'convert';
   $handler->display->display_options['arguments']['tid']['validate_options']['transform'] = TRUE;
   $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'empty';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
@@ -362,6 +361,12 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['tid']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['tid']['validate']['type'] = 'taxonomy_term';
+  $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
+    'stanford_department' => 'stanford_department',
+  );
+  $handler->display->display_options['arguments']['tid']['validate']['fail'] = 'empty';
 
   /* Display: Block Dept Random */
   $handler = $view->new_display('block', 'Block Dept Random', 'block_dept_random');
@@ -371,7 +376,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['empty']['view']['table'] = 'views';
   $handler->display->display_options['empty']['view']['field'] = 'view';
   $handler->display->display_options['empty']['view']['empty'] = TRUE;
-  $handler->display->display_options['empty']['view']['view_to_insert'] = 'stanford_magazine_article_featured:block_dept_recent';
+  $handler->display->display_options['empty']['view']['view_to_insert'] = 'stanford_magazine_article_featured:block_recent';
   $handler->display->display_options['empty']['view']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
@@ -383,7 +388,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'empty';
+  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
   $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
   $handler->display->display_options['arguments']['tid']['default_argument_options']['node'] = TRUE;
   $handler->display->display_options['arguments']['tid']['default_argument_options']['anyall'] = '+';
@@ -417,13 +422,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'stanford_magazine_article' => 'stanford_magazine_article',
-  );
-  /* Filter criterion: Content: Featured (field_s_mag_article_featured) */
-  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['id'] = 'field_s_mag_article_featured_value';
-  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['table'] = 'field_data_field_s_mag_article_featured';
-  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['field'] = 'field_s_mag_article_featured_value';
-  $handler->display->display_options['filters']['field_s_mag_article_featured_value']['value'] = array(
-    1 => '1',
   );
   $export['stanford_magazine_article_featured'] = $view;
 
