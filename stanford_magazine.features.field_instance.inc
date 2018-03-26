@@ -775,7 +775,7 @@ function stanford_magazine_field_default_field_instances() {
           'colorbox__thmb-square' => 0,
           'colorbox__thumbnail' => 0,
           'icon_link' => 0,
-          'image' => 0,
+          'image' => 'image',
           'image_3-col-header' => 0,
           'image_4-col-header' => 0,
           'image_6-col-banner' => 0,
