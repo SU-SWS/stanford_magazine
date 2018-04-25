@@ -1,16 +1,16 @@
 [Stanford Magazine](https://github.com/SU-SWS/stanford_magazine)
 =======
-##### Version: 7.x-1.0-beta2
+##### Version: 7.x-1.0-beta3
 
 Maintainers: [boznik](https://github.com/boznik), [cjwest](https://github.com/cjwest)
 
 [Changelog.txt](CHANGELOG.txt)
 
-The Stanford Magazine feature provides functionality for a digital (online) magazine. 
+The Stanford Magazine feature provides functionality for a digital (online) magazine.
 When you enable the [Stanford Magazine](https://github.com/SU-SWS/stanford_magazine)
 module, you will get the Stanford Magazine Article content type and related taxonomies.
 
-***Taxonomies*** 
+***Taxonomies***
 - Series
 - Topic
 
@@ -24,7 +24,7 @@ Image aspect ratios across structured content for the Magazine content types wil
 
 ***Video***
 
-On a magazine article, you have an option to upload a video in lieu of the featured image. 
+On a magazine article, you have an option to upload a video in lieu of the featured image.
 If there is a video, it will show only on the node display page.
 
 ***URLs***
@@ -43,23 +43,23 @@ This module provides views for Magazine Articles including taxonomy related view
 - *magazine/\<department\>* - Displays magazine articles related to this department sorted by date, newest to oldest.
 
 **[Stanford Magazine Issue](https://github.com/SU-SWS/stanford_magazine/stanford_mag_issue/)**
-This module provides the Magazine Issue content type. 
+This module provides the Magazine Issue content type.
 This is a "container" content type for Magazine Articles.
 - There are five articles per issue. These articles are entity referenced by the issue.
 
 ***Layouts***
-Magazine issues have a variety of layouts. 
+Magazine issues have a variety of layouts.
 - *field_s_mag_issue_layout* This field identifies the layout for an issue
-- *Magazine Issue Layout* This taxonomy defines all issue layouts. 
+- *Magazine Issue Layout* This taxonomy defines all issue layouts.
 
 
 
 ***URLs***
 - *magazine/issue/\<number\>* - Displays a single magazine issue.
- 
+
 
 **[Stanford Magazine Issue Views](https://github.com/SU-SWS/stanford_magazine/stanford_mag_issue_views/)**
-This module provides views for Magazine Issues. 
+This module provides views for Magazine Issues.
 
 ***URLs***
 - *magazine/issue* and *magazine/issue/all* - Displays all the magazines sorted by date

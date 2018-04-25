@@ -1,5 +1,9 @@
 Stanford Magazine
 
+Version 7.x-1.0-beta3                                                2018-04-25
+-------------------------------------------------------------------------------
+- We want to be able to display GIFs. To be able to display GIFs we need to use the original image size. This makes that happen.
+
 Version 7.x-1.0-beta2                                                2017-11-10
 -------------------------------------------------------------------------------
 - Updates default image for featured, stanford_magazine pages.
