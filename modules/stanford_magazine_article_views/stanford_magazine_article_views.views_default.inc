@@ -31,7 +31,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -308,7 +307,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
@@ -494,7 +492,7 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="mag-article-container">
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="mag-article-container well key-image-no-padding">
   <div class="mag-article-img">[field_s_mag_article_image]</div>
   <div class ="mag-article-content-container">
     <div class="mag-article-date">[field_s_mag_article_date]</div>
@@ -592,7 +590,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
@@ -843,7 +840,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '9';
@@ -1141,7 +1137,6 @@ function stanford_magazine_article_views_views_default_views() {
   $handler->display->display_options['cache']['output_lifespan'] = '3600';
   $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['disable_sql_rewrite'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
