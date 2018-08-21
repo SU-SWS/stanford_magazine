@@ -1,6 +1,6 @@
 [Stanford Magazine](https://github.com/SU-SWS/stanford_magazine)
 =======
-##### Version: 7.x-1.0-beta3
+##### Version: 7.x-1.0-beta4
 
 Maintainers: [boznik](https://github.com/boznik), [cjwest](https://github.com/cjwest)
 

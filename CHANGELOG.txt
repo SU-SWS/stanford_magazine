@@ -1,5 +1,11 @@
 Stanford Magazine
 
+Version 7.x-1.0-beta4                                                2018-08-22
+-------------------------------------------------------------------------------
+- We are adding the well and no-padding classes to the magazine article views.
+- Take out <div> around the [edit] in the view.
+- Remove a rogue disable_sql_rewrite in view.
+
 Version 7.x-1.0-beta3                                                2018-04-25
 -------------------------------------------------------------------------------
 - We want to be able to display GIFs. To be able to display GIFs we need to use the original image size. This makes that happen.
