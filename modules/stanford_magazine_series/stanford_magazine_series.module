@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Code for the Stanford Magazine Series feature.
+ */
+
+include_once 'stanford_magazine_series.features.inc';
+
+/**
+ * Implements template_preprocess_page().
+ */
+function stanford_magazine_series_preprocess_page(&$variables) {
+
+  if (isset($variables['node']->type)) {
+    if ($variables['node']->type == 'stanford_magazine_series') {
+      $file_path = drupal_get_path('module', 'stanford_magazine_series')
+        . "/css/stanford_magazine_series.css";
+
+      if (!file_exists($file_path)) {
+        watchdog('stanford_magazine_series', 'Missing CSS file: %file',
+          array('%file' => $file_path), WATCHDOG_NOTICE);
+        return;
+      }
+      drupal_add_css($file_path);
+    }
+  }
+}
