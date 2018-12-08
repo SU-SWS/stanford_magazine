@@ -21,7 +21,7 @@ function stanford_magazine_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'ant_pattern_stanford_magazine_article';
-  $strongarm->value = '[node:field_s_mag_article_headline]';
+  $strongarm->value = '[node:field-s-mag-article-headline]';
   $export['ant_pattern_stanford_magazine_article'] = $strongarm;
 
   $strongarm = new stdClass();
